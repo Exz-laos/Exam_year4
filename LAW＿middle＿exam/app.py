@@ -64,6 +64,9 @@ def initialize_session_state():
         # Master list of keys, based on the initial full deck or applied range
         st.session_state.card_keys_master = all_keys
     
+    if 'master_deck_size' not in st.session_state:
+        st.session_state.master_deck_size = len(st.session_state.card_keys_master) # Base it on the initial master deck
+
     if 'card_keys_active' not in st.session_state:
         # Active list of keys currently being viewed
         st.session_state.card_keys_active = st.session_state.card_keys_master
@@ -107,6 +110,8 @@ def apply_range(start_num, end_num):
         
         st.session_state.card_keys_master = master_list
         st.session_state.card_keys_active = master_list # The active deck is the new master deck
+        
+        st.session_state.master_deck_size = len(master_list) 
         
         st.session_state.total_cards = len(st.session_state.card_keys_active)
         st.session_state.current_index = 0
@@ -159,7 +164,7 @@ def mark_status(status_ja):
 
 
 # --- UI Layout ---
-st.set_page_config(page_title="LAW Flashcards", layout="wide", page_icon="🗂️")
+st.set_page_config(page_title="Law middle Flashcards", layout="wide", page_icon="🗂️")
 
 # --- Custom Dark Theme & Font Size CSS ---
 st.markdown("""
@@ -183,28 +188,33 @@ initialize_session_state()
 
 # --- Sidebar Controls (English Translation) ---
 with st.sidebar:
+    
+    st.header("📊 Progress")
+    
+    current_range_total = st.session_state.master_deck_size
+    master_keys = st.session_state.card_keys_master
+    
+    remembered_count = sum(1 for key in master_keys if st.session_state.card_status.get(key) == STATUS_UNDERSTOOD_JA)
+    repeat_count = sum(1 for key in master_keys if st.session_state.card_status.get(key) == STATUS_NEEDS_REVIEW_JA)
+    
+    st.metric(label="✅ Understood", value=f"{remembered_count} / {current_range_total}")
+    st.metric(label="🔄 Needs Review", value=f"{repeat_count} / {current_range_total}")
+    
+    if st.button("Reset Progress", use_container_width=True, help="Resets the status for ALL cards."):
+        st.session_state.card_status = {key: INITIAL_STATUS_JA for key in list(flashcard_data.keys())}
+        st.rerun()
+    
     st.header("⚙️ Settings")
     st.subheader("Card Range")
-    total_cards_overall = len(flashcard_data)
+
+    total_cards_overall = len(flashcard_data) 
+
     start_num = st.number_input("Start Card #", min_value=1, max_value=total_cards_overall, value=1, step=1)
     end_num = st.number_input("End Card #", min_value=1, max_value=total_cards_overall, value=min(10, total_cards_overall), step=1)
 
     st.toggle("Shuffle", key="shuffle_on", help="Shuffle the selected range.")
     if st.button("Apply Range", use_container_width=True):
         apply_range(start_num, end_num)
-        st.rerun()
-
-    st.header("📊 Progress")
-    
-    # Progress is calculated across the entire master deck of the current term keys
-    remembered_count = list(st.session_state.card_status.values()).count(STATUS_UNDERSTOOD_JA)
-    repeat_count = list(st.session_state.card_status.values()).count(STATUS_NEEDS_REVIEW_JA)
-    
-    st.metric(label="✅ Understood", value=f"{remembered_count} / {total_cards_overall}")
-    st.metric(label="🔄 Needs Review", value=f"{repeat_count} / {total_cards_overall}")
-    
-    if st.button("Reset Progress", use_container_width=True):
-        st.session_state.card_status = {key: INITIAL_STATUS_JA for key in list(flashcard_data.keys())}
         st.rerun()
     
     st.divider()
@@ -216,22 +226,19 @@ with st.sidebar:
 
 
 # --- Main Flashcard Area ---
-st.title("LAW")
+st.title("LAW middle2 Flashcards 🗂️")
 
 if not st.session_state.card_keys_active:
     st.warning("No cards loaded or the filtered deck is empty. Please set a range or choose a deck view.")
-    # Show status for the overall range if no active cards
     if len(st.session_state.card_keys_master) > 0 and len(st.session_state.card_keys_active) == 0:
          st.info("The current filtered deck is empty. All cards in your selected range might be marked as 'Understood'. Try 'Show All Cards in Range'.")
 else:
     current_key = st.session_state.card_keys_active[st.session_state.current_index]
     current_answer = flashcard_data[current_key]
     
-    # Get status in Japanese, then map to English for display
     current_status_ja = st.session_state.card_status.get(current_key, INITIAL_STATUS_JA)
     current_status_en = STATUS_MAP_JA_TO_EN.get(current_status_ja, "Unchecked")
     
-    # Get translation dictionaries
     thai_translation = thai_translations.get(current_key, {})
     english_translation = english_translations.get(current_key, {})
 
@@ -245,34 +252,44 @@ else:
             st.markdown(f"**Status:** {current_status_en}")
             with st.container(height=300, border=True):
                 st.subheader("Question (Japanese Term):")
-                # Render the key using the custom function (important for terms like "6角錐モデル - HSV")
                 render_content_with_latex(current_key) 
 
-            col1, col2, col3, col4 = st.columns([3, 1, 1, 1])
-            with col1:
+            # --- [NEW] Row 1: Actions & Navigation ---
+            action_col1, action_col2, action_col3 = st.columns([1, 2, 1])
+            with action_col1:
+                st.button("⬅️ Previous", on_click=prev_card, use_container_width=True,
+                          disabled=(st.session_state.current_index == 0))
+            with action_col2:
                 if st.button("Show Answer ↩️", use_container_width=True):
                     st.session_state.is_flipped = True
                     st.rerun()
-            with col2:
-                if st.button("▶️", use_container_width=True, help="Play Question Audio"):
+            with action_col3:
+                st.button("Next ➡️", on_click=next_card, use_container_width=True,
+                          disabled=(st.session_state.current_index == st.session_state.total_cards - 1))
+
+            # --- [NEW] Row 2: Translations & Audio ---
+            sec_col1, sec_col2, sec_col3 = st.columns(3)
+            with sec_col1:
+                if st.button("▶️ Audio", use_container_width=True, help="Play Question Audio"):
                     with st.spinner("Generating audio..."):
                         audio_uri = generate_audio(current_key)
                     st.session_state.audio_to_play = audio_uri
-            with col3:
-                if st.button("🇹🇭", use_container_width=True, help="Show Thai Translation"):
+            with sec_col2:
+                if st.button("🇹🇭 Thai", use_container_width=True, help="Show Thai Translation"):
                     if st.session_state.show_thai_translation == "question":
                         st.session_state.show_thai_translation = None
                     else:
                         st.session_state.show_thai_translation = "question"
                     st.rerun()
-            with col4:
-                if st.button("🇬🇧", use_container_width=True, help="Show English Translation"):
+            with sec_col3:
+                if st.button("🇬🇧 English", use_container_width=True, help="Show English Translation"):
                     if st.session_state.show_english_translation == "question":
                         st.session_state.show_english_translation = None
                     else:
                         st.session_state.show_english_translation = "question"
                     st.rerun()
 
+            # --- Audio player and translation display ---
             if st.session_state.audio_to_play:
                 st.audio(st.session_state.audio_to_play)
 
@@ -291,34 +308,44 @@ else:
             st.markdown(f"**Status:** {current_status_en}")
             with st.container(height=300, border=True):
                 st.subheader("Answer (Japanese Explanation):")
-                # Render the answer using the custom function, separating LaTeX
                 render_content_with_latex(current_answer)
 
-            col1, col2, col3, col4 = st.columns([3, 1, 1, 1])
-            with col1:
+            # --- [NEW] Row 1: Actions & Navigation ---
+            action_col1, action_col2, action_col3 = st.columns([1, 2, 1])
+            with action_col1:
+                st.button("⬅️ Previous", on_click=prev_card, use_container_width=True,
+                          disabled=(st.session_state.current_index == 0))
+            with action_col2:
                 if st.button("Hide Answer ↪️", use_container_width=True):
                     st.session_state.is_flipped = False
                     st.rerun()
-            with col2:
-                if st.button("▶️", use_container_width=True, help="Play Answer Audio"):
+            with action_col3:
+                st.button("Next ➡️", on_click=next_card, use_container_width=True,
+                          disabled=(st.session_state.current_index == st.session_state.total_cards - 1))
+
+            # --- [NEW] Row 2: Translations & Audio ---
+            sec_col1, sec_col2, sec_col3 = st.columns(3)
+            with sec_col1:
+                if st.button("▶️ Audio", use_container_width=True, help="Play Answer Audio"):
                     with st.spinner("Generating audio..."):
                         audio_uri = generate_audio(current_answer)
                     st.session_state.audio_to_play = audio_uri
-            with col3:
-                if st.button("🇹🇭", use_container_width=True, help="Show Thai Translation"):
+            with sec_col2:
+                if st.button("🇹🇭 Thai", use_container_width=True, help="Show Thai Translation"):
                     if st.session_state.show_thai_translation == "answer":
                         st.session_state.show_thai_translation = None
                     else:
                         st.session_state.show_thai_translation = "answer"
                     st.rerun()
-            with col4:
-                if st.button("🇬🇧", use_container_width=True, help="Show English Translation"):
+            with sec_col3:
+                if st.button("🇬🇧 English", use_container_width=True, help="Show English Translation"):
                     if st.session_state.show_english_translation == "answer":
                         st.session_state.show_english_translation = None
                     else:
                         st.session_state.show_english_translation = "answer"
                     st.rerun()
 
+            # --- Audio player and translation display ---
             if st.session_state.audio_to_play:
                 st.audio(st.session_state.audio_to_play)
                 
@@ -332,18 +359,13 @@ else:
                     st.subheader("🇹🇭 Thai Translation (Answer)")
                     st.info(thai_translation["answer"])
 
+    # --- [MOVED] Divider is now before status buttons ---
     st.divider()
 
-    nav_col1, nav_col2 = st.columns(2)
-    with nav_col1:
-        st.button("⬅️ Previous", on_click=prev_card, use_container_width=True,
-                  disabled=(st.session_state.current_index == 0))
-    with nav_col2:
-        st.button("Next ➡️", on_click=next_card, use_container_width=True,
-                  disabled=(st.session_state.current_index == st.session_state.total_cards - 1))
+    # --- [REMOVED] Navigation buttons were here, now moved up ---
 
+    # --- Status buttons remain at the bottom ---
     status_col1, status_col2 = st.columns(2)
-    # Using Japanese status keys for the function arguments
     with status_col1:
         st.button("✅ Understood", on_click=mark_status, args=(STATUS_UNDERSTOOD_JA,), use_container_width=True)
     with status_col2:
