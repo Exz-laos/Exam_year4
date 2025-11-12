@@ -36,24 +36,53 @@ def generate_audio(text):
         print(f"Audio generation error: {e}")
         return None
 
+# --- [MODIFIED FUNCTION] ---
 def render_content_with_latex(content):
-    """Renders text, splitting it to use st.latex for math formulas."""
-    # Regex to find text enclosed by $...$ or $$...$$
-    # It splits the string into text parts and LaTeX parts (keeping the delimiters)
-    # The pure Japanese term keys don't contain $ so this mainly affects the answers.
-    parts = re.split(r'(\$.+?\$|\$\$.+?\$\$)', content)
+    """
+    Renders text, splitting for LaTeX and correctly formatting 
+    bulleted lists in the Japanese text.
+    """
+    # 1. Split by LaTeX first
+    latex_parts = re.split(r'(\$.+?\$|\$\$.+?\$\$)', content)
 
-    for part in parts:
+    for part in latex_parts:
         if part.startswith('$'):
-            # This is a LaTeX formula part (starts with $ or $$)
+            # This is a LaTeX formula part
             latex_code = part.strip('$')
             if latex_code:
-                # Use st.latex for correct rendering
                 st.latex(latex_code)
         elif part:
-            # This is a regular text part
-            # Use st.markdown with the custom class for bigger font
-            st.markdown(f'<div class="flashcard-text">{part}</div>', unsafe_allow_html=True)
+            # This is a regular text part.
+            # 2. Now split this part by the list delimiters.
+            # This regex splits the string *before* an asterisk,
+            # handling both " * " and "*" cases.
+            # It uses re.split with a capture group (the ' ?\*')
+            # to split the text while keeping the delimiter.
+            list_items = re.split(r'( ?\*)', part)
+
+            # The first item is always the header/question part.
+            if list_items[0]:
+                st.markdown(f'<div class="flashcard-text">{list_items[0]}</div>', unsafe_allow_html=True)
+            
+            # 3. Iterate over the rest, pairing them up (delimiter, text)
+            # We step by 2: (index 1, 2), (index 3, 4), ...
+            for i in range(1, len(list_items), 2):
+                if i + 1 < len(list_items):
+                    # Combine the delimiter (e.g., " *") and the text (e.g., "ア...")
+                    item_text = list_items[i] + list_items[i+1]
+                    item_text = item_text.strip() # Clean up any extra spaces
+                    
+                    # Ensure it starts with an asterisk (as a bullet)
+                    if not item_text.startswith('*'):
+                        item_text = '*' + item_text
+                        
+                    # --- THIS IS THE FIX ---
+                    # Render each list item in its *own div* to force a new line.
+                    st.markdown(f'<div class="flashcard-text">{item_text}</div>', unsafe_allow_html=True)
+                
+                elif list_items[i]: # Handle a trailing part if it exists
+                     st.markdown(f'<div class="flashcard-text">{list_items[i]}</div>', unsafe_allow_html=True)
+# --- [END MODIFIED FUNCTION] ---
 
 
 def initialize_session_state():
@@ -164,7 +193,7 @@ def mark_status(status_ja):
 
 
 # --- UI Layout ---
-st.set_page_config(page_title="Law middle Flashcards", layout="wide", page_icon="🗂️")
+st.set_page_config(page_title="LAW middle Flashcards", layout="wide", page_icon="🗂️")
 
 # --- Custom Dark Theme & Font Size CSS ---
 st.markdown("""
@@ -250,11 +279,13 @@ else:
     if not st.session_state.is_flipped:
         with card_placeholder.container():
             st.markdown(f"**Status:** {current_status_en}")
+            
+            # --- [REVERTED] height=300 is back ---
             with st.container(height=300, border=True):
                 st.subheader("Question (Japanese Term):")
                 render_content_with_latex(current_key) 
 
-            # --- [NEW] Row 1: Actions & Navigation ---
+            # --- Row 1: Actions & Navigation ---
             action_col1, action_col2, action_col3 = st.columns([1, 2, 1])
             with action_col1:
                 st.button("⬅️ Previous", on_click=prev_card, use_container_width=True,
@@ -267,7 +298,7 @@ else:
                 st.button("Next ➡️", on_click=next_card, use_container_width=True,
                           disabled=(st.session_state.current_index == st.session_state.total_cards - 1))
 
-            # --- [NEW] Row 2: Translations & Audio ---
+            # --- Row 2: Translations & Audio ---
             sec_col1, sec_col2, sec_col3 = st.columns(3)
             with sec_col1:
                 if st.button("▶️ Audio", use_container_width=True, help="Play Question Audio"):
@@ -306,11 +337,13 @@ else:
     else: # Card is flipped (Answer side)
         with card_placeholder.container():
             st.markdown(f"**Status:** {current_status_en}")
+            
+            # --- [REVERTED] height=300 is back ---
             with st.container(height=300, border=True):
                 st.subheader("Answer (Japanese Explanation):")
                 render_content_with_latex(current_answer)
 
-            # --- [NEW] Row 1: Actions & Navigation ---
+            # --- Row 1: Actions & Navigation ---
             action_col1, action_col2, action_col3 = st.columns([1, 2, 1])
             with action_col1:
                 st.button("⬅️ Previous", on_click=prev_card, use_container_width=True,
@@ -323,7 +356,7 @@ else:
                 st.button("Next ➡️", on_click=next_card, use_container_width=True,
                           disabled=(st.session_state.current_index == st.session_state.total_cards - 1))
 
-            # --- [NEW] Row 2: Translations & Audio ---
+            # --- Row 2: Translations & Audio ---
             sec_col1, sec_col2, sec_col3 = st.columns(3)
             with sec_col1:
                 if st.button("▶️ Audio", use_container_width=True, help="Play Answer Audio"):
@@ -359,12 +392,10 @@ else:
                     st.subheader("🇹🇭 Thai Translation (Answer)")
                     st.info(thai_translation["answer"])
 
-    # --- [MOVED] Divider is now before status buttons ---
+    # --- Divider ---
     st.divider()
 
-    # --- [REMOVED] Navigation buttons were here, now moved up ---
-
-    # --- Status buttons remain at the bottom ---
+    # --- Status buttons ---
     status_col1, status_col2 = st.columns(2)
     with status_col1:
         st.button("✅ Understood", on_click=mark_status, args=(STATUS_UNDERSTOOD_JA,), use_container_width=True)
