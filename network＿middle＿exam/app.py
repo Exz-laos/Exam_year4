@@ -193,7 +193,7 @@ def mark_status(status_ja):
 
 
 # --- UI Layout ---
-st.set_page_config(page_title="LAW middle Flashcards", layout="wide", page_icon="🗂️")
+st.set_page_config(page_title="Network middle Flashcards", layout="wide", page_icon="🗂️")
 
 # --- Custom Dark Theme & Font Size CSS ---
 st.markdown("""
@@ -255,7 +255,7 @@ with st.sidebar:
 
 
 # --- Main Flashcard Area ---
-st.title("LAW middle2 Flashcards 🗂️")
+st.title("Network middle2 Flashcards 🗂️")
 
 if not st.session_state.card_keys_active:
     st.warning("No cards loaded or the filtered deck is empty. Please set a range or choose a deck view.")
