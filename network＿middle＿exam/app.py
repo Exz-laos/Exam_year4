@@ -4,6 +4,7 @@ import io
 import base64
 import random
 import re
+# data.py is in the same directory and contains the variables
 from data import flashcard_data, thai_translations, english_translations
 
 # --- Configuration for English UI ---
@@ -26,7 +27,9 @@ def generate_audio(text):
     audio_bytes = io.BytesIO()
     try:
         # NOTE: Keeping lang='ja' to pronounce the Japanese terms/answers
-        tts = gTTS(text=text, lang='ja', slow=False) 
+        # Clean text for TTS: remove markdown code syntax
+        clean_text = re.sub(r'```python|```|`', '', text)
+        tts = gTTS(text=clean_text, lang='ja', slow=False) 
         tts.write_to_fp(audio_bytes)
         audio_bytes.seek(0)
         b64 = base64.b64encode(audio_bytes.read()).decode('utf-8')
@@ -36,54 +39,10 @@ def generate_audio(text):
         print(f"Audio generation error: {e}")
         return None
 
-# --- [MODIFIED FUNCTION] ---
-def render_content_with_latex(content):
-    """
-    Renders text, splitting for LaTeX and correctly formatting 
-    bulleted lists in the Japanese text.
-    """
-    # 1. Split by LaTeX first
-    latex_parts = re.split(r'(\$.+?\$|\$\$.+?\$\$)', content)
-
-    for part in latex_parts:
-        if part.startswith('$'):
-            # This is a LaTeX formula part
-            latex_code = part.strip('$')
-            if latex_code:
-                st.latex(latex_code)
-        elif part:
-            # This is a regular text part.
-            # 2. Now split this part by the list delimiters.
-            # This regex splits the string *before* an asterisk,
-            # handling both " * " and "*" cases.
-            # It uses re.split with a capture group (the ' ?\*')
-            # to split the text while keeping the delimiter.
-            list_items = re.split(r'( ?\*)', part)
-
-            # The first item is always the header/question part.
-            if list_items[0]:
-                st.markdown(f'<div class="flashcard-text">{list_items[0]}</div>', unsafe_allow_html=True)
-            
-            # 3. Iterate over the rest, pairing them up (delimiter, text)
-            # We step by 2: (index 1, 2), (index 3, 4), ...
-            for i in range(1, len(list_items), 2):
-                if i + 1 < len(list_items):
-                    # Combine the delimiter (e.g., " *") and the text (e.g., "ア...")
-                    item_text = list_items[i] + list_items[i+1]
-                    item_text = item_text.strip() # Clean up any extra spaces
-                    
-                    # Ensure it starts with an asterisk (as a bullet)
-                    if not item_text.startswith('*'):
-                        item_text = '*' + item_text
-                        
-                    # --- THIS IS THE FIX ---
-                    # Render each list item in its *own div* to force a new line.
-                    st.markdown(f'<div class="flashcard-text">{item_text}</div>', unsafe_allow_html=True)
-                
-                elif list_items[i]: # Handle a trailing part if it exists
-                     st.markdown(f'<div class="flashcard-text">{list_items[i]}</div>', unsafe_allow_html=True)
-# --- [END MODIFIED FUNCTION] ---
-
+# --- [BUGGY FUNCTION REMOVED] ---
+# The render_content_with_latex function was here.
+# It has been deleted as it was causing the error.
+# We will use st.markdown() instead.
 
 def initialize_session_state():
     """Initializes the session state, incorporating master/active deck indices."""
@@ -177,12 +136,18 @@ def next_card():
     if st.session_state.current_index < st.session_state.total_cards - 1:
         st.session_state.current_index += 1
         st.session_state.is_flipped = False
+        st.session_state.audio_to_play = None # Stop audio on card change
+        # st.session_state.show_english_translation = None
+        # st.session_state.show_thai_translation = None
 
 
 def prev_card():
     if st.session_state.current_index > 0:
         st.session_state.current_index -= 1
         st.session_state.is_flipped = False
+        st.session_state.audio_to_play = None # Stop audio on card change
+        # st.session_state.show_english_translation = None
+        # st.session_state.show_thai_translation = None
 
 
 def mark_status(status_ja):
@@ -205,10 +170,30 @@ st.markdown("""
         div.stButton > button:hover { background-color: #444; border: 1px solid #666; color: #FFFFFF; }
         section[data-testid="stSidebar"] { background-color: #1A1A1A; border-right: 1px solid #333; }
 
-        /* 🌟 Custom Font Size for Regular Text (150% of base font) 🌟 */
+        /* Make main card text larger. 
+         This class is no longer used by the deleted function, 
+         but we leave it in case we want to apply it to st.markdown.
+         (st.markdown handles its own sizing for code, tables, etc.)
+        */
         .flashcard-text {
-            font-size: 1.5em; /* Increased by 50% */
-            line-height: 1.6; /* Maintain line spacing for readability */
+            font-size: 1.5em; 
+            line-height: 1.6;
+        }
+
+        /* Ensure code blocks in markdown scroll horizontally */
+        pre {
+            white-space: pre;
+            overflow-x: auto;
+            background-color: #222;
+            border: 1px solid #444;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #333;
+            padding: 2px 5px;
+            border-radius: 4px;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -239,7 +224,7 @@ with st.sidebar:
     total_cards_overall = len(flashcard_data) 
 
     start_num = st.number_input("Start Card #", min_value=1, max_value=total_cards_overall, value=1, step=1)
-    end_num = st.number_input("End Card #", min_value=1, max_value=total_cards_overall, value=min(10, total_cards_overall), step=1)
+    end_num = st.number_input("End Card #", min_value=1, max_value=total_cards_overall, value=min(total_cards_overall, total_cards_overall), step=1) # Default to all
 
     st.toggle("Shuffle", key="shuffle_on", help="Shuffle the selected range.")
     if st.button("Apply Range", use_container_width=True):
@@ -280,10 +265,11 @@ else:
         with card_placeholder.container():
             st.markdown(f"**Status:** {current_status_en}")
             
-            # --- [REVERTED] height=300 is back ---
+            # --- [FIX #1] Using st.markdown, height=300 ---
             with st.container(height=300, border=True):
                 st.subheader("Question (Japanese Term):")
-                render_content_with_latex(current_key) 
+                # Use st.markdown, which correctly handles newlines and code blocks
+                st.markdown(current_key, unsafe_allow_html=True) 
 
             # --- Row 1: Actions & Navigation ---
             action_col1, action_col2, action_col3 = st.columns([1, 2, 1])
@@ -327,21 +313,24 @@ else:
             if st.session_state.show_english_translation == "question" and "question" in english_translation:
                 with st.container(border=True):
                     st.subheader("🇬🇧 English Translation (Question)")
+                    # st.info renders markdown correctly
                     st.info(english_translation["question"])
 
             if st.session_state.show_thai_translation == "question" and "question" in thai_translation:
                 with st.container(border=True):
                     st.subheader("🇹🇭 Thai Translation (Question)")
+                    # st.info renders markdown correctly
                     st.info(thai_translation["question"])
 
     else: # Card is flipped (Answer side)
         with card_placeholder.container():
             st.markdown(f"**Status:** {current_status_en}")
             
-            # --- [REVERTED] height=300 is back ---
+            # --- [FIX #2] Using st.markdown, height=300 ---
             with st.container(height=300, border=True):
                 st.subheader("Answer (Japanese Explanation):")
-                render_content_with_latex(current_answer)
+                # Use st.markdown, which correctly handles newlines and code blocks
+                st.markdown(current_answer, unsafe_allow_html=True)
 
             # --- Row 1: Actions & Navigation ---
             action_col1, action_col2, action_col3 = st.columns([1, 2, 1])
@@ -385,11 +374,13 @@ else:
             if st.session_state.show_english_translation == "answer" and "answer" in english_translation:
                 with st.container(border=True):
                     st.subheader("🇬🇧 English Translation (Answer)")
+                    # st.info renders markdown correctly
                     st.info(english_translation["answer"])
 
             if st.session_state.show_thai_translation == "answer" and "answer" in thai_translation:
                 with st.container(border=True):
                     st.subheader("🇹🇭 Thai Translation (Answer)")
+                    # st.info renders markdown correctly
                     st.info(thai_translation["answer"])
 
     # --- Divider ---
