@@ -158,7 +158,7 @@ def mark_status(status):
 
 
 # --- UI Layout ---
-st.set_page_config(page_title="制御画像フラッシュカード", layout="wide", page_icon="🧮")
+st.set_page_config(page_title="tokuron_math_final2フラッシュカード", layout="wide", page_icon="🧮")
 
 # --- Custom Dark Theme CSS ---
 st.markdown("""
@@ -263,7 +263,7 @@ with st.sidebar:
 
 
 # --- Main Flashcard Area ---
-st.title("🧮 制御画像フラッシュカード")
+st.title("🧮 tokuron_math_final2 フラッシュカード")
 
 if not st.session_state.card_indices_active or st.session_state.total_cards == 0:
     st.warning("表示するカードがありません。範囲を設定するか、すべてのカードを表示してください。")
