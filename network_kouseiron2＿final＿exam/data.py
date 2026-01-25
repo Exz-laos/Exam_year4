@@ -5,6 +5,48 @@
 
 # --- ネットワーク構成論 - 上位プロトコル・インターネットサービス（統合版）---
 
+q_f1_0 = """
+【ネットワーク構成論II - 期末試験対策問題集 インデックス】
+
+■ 1-23: TCP/IP基礎・トランスポート層 (基本)
+   - 語句選択 (TCP/UDP, FTP, ポート番号)
+   - 記述 (フロー制御 vs 輻輳制御, ハンドシェイク)
+
+■ 24-34: インターネットサービス基盤 (7章)
+   - DHCPの仕組み, DNS (再帰問い合わせ)
+   - P2P vs クライアント・サーバ
+
+■ 35-40: メールサービス詳細 (7-2)
+   - SMTP, POP3, IMAP, SMTP認証
+
+■ 41-46: Webサービス詳細 (7-3)
+   - HTTPメソッド, ステータスコード, Cookie
+
+■ 47-53: セキュリティの基礎 (8-1)
+   - 情報セキュリティ3要素 (CIA), 攻撃手法 (DoS/SQLi)
+
+■ 54-60: 暗号技術 (8-2)
+   - 共通鍵 vs 公開鍵, 電子署名, PKI
+
+■ 61-66: セキュア通信プロトコル (8-3)
+   - SSL/TLS, IPsec (モードと機能)
+
+■ 67-72: 防御技術 (8-4)
+   - ファイアウォール, DMZ, IDS/IPS
+
+■ 73-85: 【重要】演習課題・過去問重点対策
+   - 過去問頻出の記述問題まとめ (計算問題含む)
+
+■ 86-91: 【予想】2025年度期末試験 予想問題
+   - 応用的な語句選択・記述問題
+
+■ 92-98: 【直前】演習課題4 完全網羅
+   - セキュリティ・暗号化の総復習
+
+■ 99-105: OSI参照モデル 各層の役割
+   - 物理層〜アプリケーション層の定義
+"""
+
 # --- 1. 語句選択問題 (TCP/UDP, FTP, DNS, DHCP) ---
 q_f1_1 = "1. (1) OSI参照モデルの第4層であるトランスポート層が管理する、送受信ホスト間の仮想的な通信路を何と呼ぶか。 ( final1.pdf p.3 )"
 q_f1_2 = "1. (2) TCPが提供する通信サービスの種類はコネクション型だが、UDPが提供する通信サービスの種類は何か。 ( final1.pdf p.9 )"
@@ -177,7 +219,7 @@ q_f1_74 = "15. (2) 【演習/2025問1】DNSの主な役割は、( a ) を ( b ) 
 # Flashcard 3: DHCP Definition (Kadai 3, Exam 2023, 2024)
 q_f1_75 = "15. (3) 【演習/2023-24問1】IPアドレスが設定されていないクライアントがネットワークに接続したとき、( a ) 機能を利用して通信に必要な設定を自動的に行うためのプロトコルを ( b ) という。"
 
-# Flashcard 4: Mail Delivery Protocols (Kadai 3, All Exams)
+# Flashcard 4: Mail Delivery Protocols (Kadai 3, All Exam\s)
 q_f1_76 = "15. (4) 【全過去問頻出】メール配送の各矢印で使用されるプロトコルを答えよ。\n①メールクライアント → 送信サーバ\n②メールサーバ → メールサーバ (転送)\n③受信サーバ → メールクライアント\n④Webブラウザ ⇔ Webメールサーバ"
 
 # Flashcard 5: POP3 vs IMAP (ユーザー提供の完璧な回答)
@@ -194,7 +236,7 @@ q_f1_80 = "15. (8) 【全過去問頻出】TCPにおける輻輳ウィンドウ�
 
 
 # Flashcard 9: TCP Bitrate Calculation (All Exams)
-q_f1_81 = "15. (9) 【全過去問頻出:計算】RTT=10ms、セグメントサイズ=1000Byte (8000bit)、広告ウィンドウ=15セグメントとする。\n(a) 輻輳ウィンドウ=5 の時の送信ビットレート(bps)\n(b) 輻輳ウィンドウ=25 の時の送信ビットレート(bps)\nを求めよ。"
+q_f1_81 = """15. (9) 【全過去問頻出:計算】RTT=10ms、セグメントサイズ=1000Byte (8000bit)、広告ウィンドウ=15セグメントとする。\n(a) 輻輳ウィンドウ=5 の時の送信ビットレート(bps)\n(b) 輻輳ウィンドウ=25 の時の送信ビットレート(bps)\nを求めよ。"""
 
 # Flashcard 10: Security CIA (All Exams)
 q_f1_82 = "15. (10) 【全過去問頻出】情報セキュリティの3要素（CIA）である「機密性」「完全性」「可用性」の定義を、それぞれ簡潔に記述せよ。"
@@ -229,7 +271,55 @@ q_f1_90 = "16. (5) 【予想:記述】電子署名において、「誰が」「
 # 予想問題 F: IDSとIPSの違い (8-4防御技術.pdf)
 q_f1_91 = "16. (6) 【予想:記述】IDS（侵入検知システム）と IPS（侵入防止システム）の役割の違いを簡潔に説明せよ。"
 
+# --- 12. 演習課題4 (期末直前対策) ---
+
+# 問1: 情報セキュリティと暗号の基礎
+q_f1_92 = "17. (1) 【演習4-1】情報セキュリティの3要素とは、権利をもつ人だけが情報にアクセスできる ( a )、情報の内容や処理が正確かつ完全である ( b )、必要なときに情報にアクセスできる ( c ) である。 ( 演習課題4-解答.pdf p.1 )"
+
+q_f1_93 = "17. (2) 【演習4-1】数学的に安全な暗号を使用したとしても、( d ) により鍵が盗まれる場合がある。 ( 演習課題4-解答.pdf p.1 )"
+
+q_f1_94 = "17. (3) 【演習4-1】共通鍵方式を用いて電文を暗号化して送る場合、暗号鍵と復号鍵には ( e ) を用いるため、利用者間で事前に ( f ) しておく必要がある。 ( 演習課題4-解答.pdf p.1 )"
+
+# 問2: 公開鍵方式の使い分け
+q_f1_95 = "17. (4) 【演習4-2】公開鍵方式において、電文を「暗号化」して送る場合（機密性）、暗号鍵には ( a ) を用い、復号鍵には ( b ) を用いる。 ( 演習課題4-解答.pdf p.1 )"
+
+q_f1_96 = "17. (5) 【演習4-2】公開鍵方式において、「電子署名」を行う場合（認証・改ざん検知）、電文のハッシュ値を ( c ) を用いて暗号化して添付する。受信者は ( d ) を用いて復号し、検証する。 ( 演習課題4-解答.pdf p.1 )"
+
+# 問3: SSL/TLSの手順
+q_f1_97 = "17. (6) 【演習4-3】SSL/TLSの手順の空欄を埋めよ。\n(1) サーバは ( a ) とサーバ証明書をクライアントへ送る。\n(2) クライアントはサーバ証明書を ( b ) を用いて検証する。\n(3) クライアントはセッション鍵用データを ( c ) を用いて暗号化して送る。\n(4) サーバは ( d ) を用いて復号する。 ( 演習課題4-解答.pdf p.2 )"
+
+# 問4: IDS/IPSの機能
+q_f1_98 = "17. (7) 【演習4-4】IDS（侵入検知システム）とIPS（侵入防止システム）について、それぞれの機能を説明せよ。 ( 演習課題4-解答.pdf p.2 )",
+
+
+# --- 13. OSI参照モデル 各層の役割 (Roles of OSI Layers) ---
+# [cite_start]Based on final1.pdf Page 3 [cite: 253]
+
+# 物理層 (Physical Layer)
+q_f1_99 = "18. (1) 【物理層】物理層の役割を述べよ。 ( final1.pdf p.3 )"
+
+# データリンク層 (Data Link Layer)
+q_f1_100 = "18. (2) 【データリンク層】データリンク層の役割を述べよ。 ( final1.pdf p.3 )"
+
+# ネットワーク層 (Network Layer)
+q_f1_101 = "18. (3) 【ネットワーク層】ネットワーク層の役割を述べよ。 ( final1.pdf p.3 )"
+
+# トランスポート層 (Transport Layer)
+q_f1_102 = "18. (4) 【トランスポート層】トランスポート層の役割を述べよ。 ( final1.pdf p.3 )"
+
+# セッション層 (Session Layer)
+q_f1_103 = "18. (5) 【セッション層】セッション層の役割を述べよ。 ( final1.pdf p.3 )"
+
+# プレゼンテーション層 (Presentation Layer)
+q_f1_104 = "18. (6) 【プレゼンテーション層】プレゼンテーション層の役割を述べよ。 ( final1.pdf p.3 )"
+
+# アプリケーション層 (Application Layer)
+q_f1_105 = "18. (7) 【アプリケーション層】アプリケーション層の役割を述べよ。 ( final1.pdf p.3 )"
+
+
+
 flashcard_data = {
+    q_f1_0: "Final Exam Flashcards - Network Architecture 2",
     # 1. 語句選択問題 (基本)
     q_f1_1: "論理的なコネクション", q_f1_2: "コネクションレス型", q_f1_3: "フロー制御", q_f1_4: "FIN", q_f1_5: "ソケット",
     q_f1_6: "Well-known ポート", q_f1_7: "パッシブモード", q_f1_8: "STOR",
@@ -318,9 +408,30 @@ flashcard_data = {
     q_f1_79: "フロー制御では受信ホストの処理能力を超えないように、受信ホストから通知される受信可能バッファサイズに応じて、送信レートを調整する。\n一方、輻輳制御ではネットワークの処理能力を超えないように、ネットワークの輻輳状態に応じて、送信レートを調整する。",
     
     q_f1_80: "スロースタートフェーズでは指数的に増加（送信レートを速やかに増加）させ、スロースタートフェーズの閾値を超えた後に、輻輳回避フェーズに移り、線形的に増加（送信レートを緩やかに増加）させながら適切な輻輳ウィンドウを探る。",
+    q_f1_81: """(a) 4 Mbps (b) 12 Mbps【解説】
+       ■ 計算式 (Formula)
+       実際のウィンドウサイズ = min(広告ウィンドウ, 輻輳ウィンドウ)
+       送信レート(bps) = (実際のウィンドウ × セグメントサイズ × 8) ÷ RTT
 
-    
-    q_f1_81: "(a) 4 Mbps (実効ウィンドウ=5。5×8000÷0.01)\n(b) 12 Mbps (実効ウィンドウ=15。広告ウィンドウ15で頭打ちのため。15×8000÷0.01)",
+        ■ 変数 (Variables)
+        ・RTT = 10ms = 0.01秒
+        ・セグメントサイズ = 1000 Byte = 8000 bit (×8bit変換)
+        ・広告ウィンドウ (受信側限界) = 15
+
+        --------------------------------
+        (a) 輻輳ウィンドウが 5 の場合
+        1. ウィンドウ決定: min(15, 5) = 5 セグメント
+        2. データ量: 5 × 8000 bit = 40,000 bit
+        3. レート計算: 40,000 ÷ 0.01 = 4,000,000 bps
+        → 答え: 4 Mbps
+
+        (b) 輻輳ウィンドウが 25 の場合
+        1. ウィンドウ決定: min(15, 25) = 15 セグメント
+        ※受信側の限界(広告ウィンドウ)で頭打ちになります
+        2. データ量: 15 × 8000 bit = 120,000 bit
+        3. レート計算: 120,000 ÷ 0.01 = 12,000,000 bps
+        → 答え: 12 Mbps""",
+
     q_f1_82: "機密性: 許可された人だけがアクセスできること。\n完全性: 情報が正確で改ざんされていないこと。\n可用性: 必要な時にいつでも使えること。",
     q_f1_83: "(1) (a) トランスポート, (b) 改ざん (および なりすまし)\n(2) (c) インターネット, (d) データ部 (ペイロード), (e) IPパケット全体 (ヘッダ含む)",
     q_f1_84: "(a) 認証局の公開鍵\n(b) サーバの公開鍵\n(c) サーバの秘密鍵",
@@ -331,7 +442,21 @@ flashcard_data = {
     q_f1_88: "(a) SQLインジェクション\n(b) クロスサイトスクリプティング (XSS)\n(c) DoS攻撃",
     q_f1_89: "静的: IPやポート番号の固定ルールで判断。\n動的: 内部からの通信に対する応答のみ許可。\nステートフル: プロトコルの手順や通信状態（コンテキスト）まで監視して判断。",
     q_f1_90: "暗号化: 送信者が「送信者の秘密鍵」で行う。\n復号: 受信者が「送信者の公開鍵」で行う。\n確認事項: 送信者が本人であること（認証）、データが改ざんされていないこと（完全性）。",
-    q_f1_91: "IDS: 攻撃の兆候を「検知」して「通報」する（遮断はしないことが多い）。\nIPS: 検知に加えて、通信を「遮断」するなどして「防御」する。"
+    q_f1_91: "IDS: 攻撃の兆候を「検知」して「通報」する（遮断はしないことが多い）。\nIPS: 検知に加えて、通信を「遮断」するなどして「防御」する。",
+    q_f1_92: "(a) 機密性\n(b) 完全性\n(c) 可用性",
+    q_f1_93: "(d) 実装攻撃 (または サイドチャネル攻撃)",
+    q_f1_94: "(e) 共通鍵\n(f) 共有 (または 配布)",
+    q_f1_95: "(a) 受信者の公開鍵\n(b) 受信者の秘密鍵",
+    q_f1_96: "(c) 送信者の秘密鍵\n(d) 送信者の公開鍵",
+    q_f1_97: "(a) サーバの公開鍵\n(b) 認証局の公開鍵\n(c) サーバの公開鍵\n(d) サーバの秘密鍵",
+    q_f1_98: "IDS: パケットの内容やログを分析し、攻撃の兆候を検知・通報する。\nIPS: IDSの機能に加えて遮断などの処置もできる。",
+    q_f1_99: "電気信号レベルやコネクタ形状などのハードウェア機能。",
+    q_f1_100: "伝送メディアを介した通信ノード間でデータを正しく伝送するための制御機能。",
+    q_f1_101: "複数の中継ノードを介した経路選択(ルーティング)やデータの中継・転送機能。",
+    q_f1_102: "送受信ホスト間の論理的なコネクションの管理,通信品質や信頼性の保証機能。",
+    q_f1_103: "アプリケーション間の通信開始・維持・終了などデータ伝送の同期制御機能。",
+    q_f1_104: "データの表現形式(符号化,暗号化など)に関する制御機能。",
+    q_f1_105: "具体的なサービス(電子メールなど)に応じた各種通信機能。"
 
     
 
@@ -355,6 +480,7 @@ flashcard_data = {
 # --- 英語翻訳 ---
 
 english_translations = {
+    q_f1_0: "Final Exam Flashcards - Network Architecture 2",
     # 1. 語句選択問題 (基本)
     q_f1_1: {"question": "1. (1) What is the term for the virtual communication path managed by the Transport Layer (OSI Layer 4)? ( final1.pdf p.3 )", "answer": "Logical Connection"},
     q_f1_2: {"question": "1. (2) TCP provides a connection-oriented service. What type of communication service does UDP provide? ( final1.pdf p.9 )", "answer": "Connectionless Service"},
@@ -645,7 +771,64 @@ english_translations = {
     q_f1_91: {
         "question": "16. (6) [Prediction] Briefly explain the difference between IDS and IPS.",
         "answer": "IDS: Detects and Alerts (usually does not block).\nIPS: Detects and Blocks (Prevents)."
+    },
+    q_f1_92: {
+        "question": "17. (1) [Ex4-1] The 3 elements of InfoSec are ( a ) (access by authorized users only), ( b ) (accurate/complete info), and ( c ) (accessible when needed). ( 演習課題4-解答.pdf p.1 )",
+        "answer": "(a) Confidentiality\n(b) Integrity\n(c) Availability"
+    },
+    q_f1_93: {
+        "question": "17. (2) [Ex4-1] Even with mathematically secure encryption, keys may be stolen by ( d ). ( 演習課題4-解答.pdf p.1 )",
+        "answer": "(d) Implementation Attack (or Side Channel Attack)"
+    },
+    q_f1_94: {
+        "question": "17. (3) [Ex4-1] In Symmetric Key Encryption, ( e ) is used for both keys, so it is necessary to ( f ) it between users beforehand. ( 演習課題4-解答.pdf p.1 )",
+        "answer": "(e) Common Key (Symmetric Key)\n(f) Share (or Distribute)"
+    },
+    q_f1_95: {
+        "question": "17. (4) [Ex4-2] In Public Key Encryption, when 'encrypting' a message (Confidentiality), use ( a ) for encryption and ( b ) for decryption. ( 演習課題4-解答.pdf p.1 )",
+        "answer": "(a) Receiver's Public Key\n(b) Receiver's Private Key"
+    },
+    q_f1_96: {
+        "question": "17. (5) [Ex4-2] When performing 'Digital Signature' (Authentication), encrypt the hash using ( c ). The receiver decrypts using ( d ) to verify. ( 演習課題4-解答.pdf p.1 )",
+        "answer": "(c) Sender's Private Key\n(d) Sender's Public Key"
+    },
+    q_f1_97: {
+        "question": "17. (6) [Ex4-3] Fill in the blanks for SSL/TLS:\n(1) Server sends ( a ) and cert.\n(2) Client verifies cert using ( b ).\n(3) Client encrypts session key data using ( c ).\n(4) Server decrypts using ( d ). ( 演習課題4-解答.pdf p.2 )",
+        "answer": "(a) Server's Public Key\n(b) CA's Public Key\n(c) Server's Public Key\n(d) Server's Private Key"
+    },
+    q_f1_98: {
+        "question": "17. (7) [Ex4-4] Explain the functions of IDS (Intrusion Detection System) and IPS (Intrusion Prevention System). ( 演習課題4-解答.pdf p.2 )",
+        "answer": "IDS: Analyzes packets/logs to detect and report signs of attacks.\nIPS: In addition to IDS functions, can take measures such as blocking."
+    },
+    q_f1_99: {
+        "question": "18. (1) [Physical Layer] Describe the role of the Physical Layer.",
+        "answer": "Hardware functions such as electrical signal levels and connector shapes."
+    },
+    q_f1_100: {
+        "question": "18. (2) [Data Link Layer] Describe the role of the Data Link Layer.",
+        "answer": "Control functions for correctly transmitting data between communication nodes via transmission media."
+    },
+    q_f1_101: {
+        "question": "18. (3) [Network Layer] Describe the role of the Network Layer.",
+        "answer": "Route selection (routing) via multiple relay nodes and data relay/forwarding functions."
+    },
+    q_f1_102: {
+        "question": "18. (4) [Transport Layer] Describe the role of the Transport Layer.",
+        "answer": "Management of logical connections between sending and receiving hosts, and guarantee of communication quality and reliability."
+    },
+    q_f1_103: {
+        "question": "18. (5) [Session Layer] Describe the role of the Session Layer.",
+        "answer": "Synchronization control functions for data transmission, such as starting, maintaining, and ending communication between applications."
+    },
+    q_f1_104: {
+        "question": "18. (6) [Presentation Layer] Describe the role of the Presentation Layer.",
+        "answer": "Control functions regarding data representation formats (encoding, encryption, etc.)."
+    },
+    q_f1_105: {
+        "question": "18. (7) [Application Layer] Describe the role of the Application Layer.",
+        "answer": "Various communication functions according to specific services (e.g., e-mail)."
     }
+
   
 
 }
@@ -653,6 +836,7 @@ english_translations = {
 # --- タイ語翻訳 ---
 
 thai_translations = {
+    q_f1_0: "แฟลชการ์ดสอบปลายภาค - สถาปัตยกรรมเครือข่าย 2",
     # 1. 語句選択問題 (基本)
     q_f1_1: {"question": "1. (1) สิ่งที่เรียกว่าเส้นทางการสื่อสารเสมือนจริงระหว่างโฮสต์ผู้ส่งและผู้รับซึ่งจัดการโดย Transport Layer (OSI Layer 4) คืออะไร? ( final1.pdf p.3 )", "answer": "การเชื่อมต่อแบบลอจิคัล (Logical Connection)"},
     q_f1_2: {"question": "1. (2) TCP ให้บริการการสื่อสารแบบ connection-oriented แล้ว UDP ให้บริการการสื่อสารประเภทใด? ( final1.pdf p.9 )", "answer": "บริการแบบไร้การเชื่อมต่อ (Connectionless Service)"},
@@ -939,6 +1123,64 @@ thai_translations = {
     q_f1_91: {
         "question": "16. (6) [คาดการณ์] อธิบายความแตกต่างระหว่าง IDS และ IPS สั้นๆ",
         "answer": "IDS: ตรวจจับและแจ้งเตือน (มักไม่บล็อก)\nIPS: ตรวจจับและบล็อก (ป้องกัน)"
+    },
+    q_f1_92: {
+        "question": "17. (1) [Ex4-1] องค์ประกอบ 3 ประการของความปลอดภัยข้อมูลคือ ( a ) (เข้าถึงได้เฉพาะผู้มีสิทธิ์), ( b ) (ข้อมูลถูกต้องครบถ้วน), และ ( c ) (เข้าถึงได้เมื่อต้องการ) ( 演習課題4-解答.pdf p.1 )",
+        "answer": "(a) Confidentiality (ความลับ)\n(b) Integrity (ความสมบูรณ์)\n(c) Availability (ความพร้อมใช้งาน)"
+    },
+    q_f1_93: {
+        "question": "17. (2) [Ex4-1] แม้จะใช้การเข้ารหัสที่ปลอดภัยทางคณิตศาสตร์ แต่คีย์อาจถูกขโมยโดย ( d ) ( 演習課題4-解答.pdf p.1 )",
+        "answer": "(d) Implementation Attack (การโจมตีการนำไปใช้งาน / Side Channel)"
+    },
+    q_f1_94: {
+        "question": "17. (3) [Ex4-1] ในการเข้ารหัสแบบกุญแจสมมาตร จะใช้ ( e ) สำหรับทั้งสองคีย์ ดังนั้นจึงจำเป็นต้อง ( f ) ระหว่างผู้ใช้ล่วงหน้า ( 演習課題4-解答.pdf p.1 )",
+        "answer": "(e) Common Key (คีย์ร่วม/คีย์สมมาตร)\n(f) Share (แบ่งปัน/แจกจ่าย)"
+    },
+    q_f1_95: {
+        "question": "17. (4) [Ex4-2] ในการเข้ารหัสแบบกุญแจสาธารณะ เมื่อ 'เข้ารหัส' ข้อความ (เพื่อความลับ) ให้ใช้ ( a ) ในการเข้ารหัส และ ( b ) ในการถอดรหัส ( 演習課題4-解答.pdf p.1 )",
+        "answer": "(a) คีย์สาธารณะของผู้รับ\n(b) คีย์ส่วนตัวของผู้รับ"
+    },
+    q_f1_96: {
+        "question": "17. (5) [Ex4-2] เมื่อทำ 'ลายเซ็นดิจิทัล' (เพื่อยืนยันตัวตน) ให้เข้ารหัสค่าแฮชโดยใช้ ( c ) ผู้รับจะถอดรหัสโดยใช้ ( d ) เพื่อตรวจสอบ ( 演習課題4-解答.pdf p.1 )",
+        "answer": "(c) คีย์ส่วนตัวของผู้ส่ง\n(d) คีย์สาธารณะของผู้ส่ง"
+    },
+    q_f1_97: {
+        "question": "17. (6) [Ex4-3] เติมคำในช่องว่างสำหรับ SSL/TLS:\n(1) เซิร์ฟเวอร์ส่ง ( a ) และใบรับรอง\n(2) ไคลเอนต์ตรวจสอบใบรับรองโดยใช้ ( b )\n(3) ไคลเอนต์เข้ารหัสข้อมูลคีย์เซสชันโดยใช้ ( c )\n(4) เซิร์ฟเวอร์ถอดรหัสโดยใช้ ( d ) ( 演習課題4-解答.pdf p.2 )",
+        "answer": "(a) คีย์สาธารณะของเซิร์ฟเวอร์\n(b) คีย์สาธารณะของ CA (ผู้ออกใบรับรอง)\n(c) คีย์สาธารณะของเซิร์ฟเวอร์\n(d) คีย์ส่วนตัวของเซิร์ฟเวอร์"
+    },
+    q_f1_98: {
+        "question": "17. (7) [Ex4-4] อธิบายหน้าที่ของ IDS (ระบบตรวจจับการบุกรุก) และ IPS (ระบบป้องกันการบุกรุก) ( 演習課題4-解答.pdf p.2 )",
+        "answer": "IDS: วิเคราะห์แพ็คเก็ต/บันทึกเพื่อตรวจจับและแจ้งเตือนสัญญาณการโจมตี\nIPS: นอกเหนือจากฟังก์ชัน IDS แล้ว ยังสามารถดำเนินมาตรการต่างๆ เช่น การบล็อก ได้"
+    },
+    q_f1_99: {
+        "question": "18. (1) [Physical Layer] จงอธิบายบทบาทของ Physical Layer",
+        "answer": "ฟังก์ชันฮาร์ดแวร์ เช่น ระดับสัญญาณไฟฟ้าและรูปร่างของตัวเชื่อมต่อ"
+    },
+    q_f1_100: {
+        "question": "18. (2) [Data Link Layer] จงอธิบายบทบาทของ Data Link Layer",
+        "answer": "ฟังก์ชันการควบคุมสำหรับการส่งข้อมูลอย่างถูกต้องระหว่างโหนดการสื่อสารผ่านสื่อกลางการส่งข้อมูล"
+    },
+    q_f1_101: {
+        "question": "18. (3) [Network Layer] จงอธิบายบทบาทของ Network Layer",
+        "answer": "การเลือกเส้นทาง (Routing) ผ่านโหนดรีเลย์หลายตัว และฟังก์ชันการรีเลย์/ส่งต่อข้อมูล"
+    },
+    q_f1_102: {
+        "question": "18. (4) [Transport Layer] จงอธิบายบทบาทของ Transport Layer",
+        "answer": "การจัดการการเชื่อมต่อทางตรรกะ (Logical Connection) ระหว่างโฮสต์ผู้ส่งและผู้รับ และการรับประกันคุณภาพและความน่าเชื่อถือของการสื่อสาร"
+    },
+    q_f1_103: {
+        "question": "18. (5) [Session Layer] จงอธิบายบทบาทของ Session Layer",
+        "answer": "ฟังก์ชันการควบคุมการซิงโครไนซ์สำหรับการส่งข้อมูล เช่น การเริ่ม การคงไว้ และการสิ้นสุดการสื่อสารระหว่างแอปพลิเคชัน"
+    },
+    q_f1_104: {
+        "question": "18. (6) [Presentation Layer] จงอธิบายบทบาทของ Presentation Layer",
+        "answer": "ฟังก์ชันการควบคุมเกี่ยวกับรูปแบบการแสดงข้อมูล (เช่น การเข้ารหัส encoding, การเข้ารหัสลับ encryption ฯลฯ)"
+    },
+    q_f1_105: {
+        "question": "18. (7) [Application Layer] จงอธิบายบทบาทของ Application Layer",
+        "answer": "ฟังก์ชันการสื่อสารต่างๆ ตามบริการที่ระบุ (เช่น อีเมล)"
     }
+
+
     
 }
