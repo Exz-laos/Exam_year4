@@ -194,6 +194,153 @@ extra_q_11_5 = """9. (5) 無効と取消しの違いについて、( )に入る�
 エ A: 裁判所の判決時から B: 遡って（初めから）"""
 
 
+# --- Series 10: Copyright vs Design (Teacher's Hints) ---
+extra_q_12_1 = """10. (1) 著作権法で保護される「著作物」の例として、最も適当なものを2つ選びなさい。
+ア 自然法則を利用した技術的な思想（アイデア）そのもの
+イ コンピュータ・プログラム（ソースコードなど）
+ウ 物品の形状、模様、色彩などのデザインで、視覚を通じて美感を起こさせるもの
+エ 建築の著作物（芸術的な建築物や、一般的な建物）"""
+
+extra_q_12_2 = """10. (2) 建物の法的保護について、( )に入る語句の組み合わせとして正しいものを選びなさい。
+建物は原則として「( A )」によって保護される。しかし、プレハブ住宅のような「( B )」は、大量生産される工業製品としての側面が強いため、例外的に「( C )」の保護対象となることがある。
+
+ア A: 特許権 B: 注文住宅 C: 実用新案権
+イ A: 著作権 B: 組立家屋（量産される家屋） C: 意匠権
+ウ A: 意匠権 B: 商業ビル C: 商標権
+エ A: 著作権 B: 鉄筋コンクリート造 C: 特許権"""
+
+extra_q_12_3 = """10. (3) 著作権と意匠権の性質の違いについて、正しい説明を1つ選びなさい。
+ア 意匠権は、創作した時点で権利が発生する「無方式主義」をとるが、著作権は特許庁への出願と登録が必要な「登録主義」をとる。
+イ 著作権は、他人が偶然同じものを創作した場合には権利が及ばない「相対的独占権」であるが、意匠権は、登録されれば類似するデザインを独自に創作した者に対しても権利を行使できる「絶対的独占権」である。
+ウ 著作権の保護期間は原則として著作者の死後70年であるが、意匠権の保護期間は設定登録の日から50年である。（注：意匠権は25年）
+エ プログラムは工業製品として利用されるため「意匠権」で保護されるのが原則であり、建築物は芸術性が高いため「特許権」で保護されるのが原則である。"""
+
+# --- Series 11: Durations & Registration (Comparison) ---
+extra_q_12_4 = """11. (1) 知的財産権の存続期間（保護期間）について、正しい組み合わせを選びなさい。
+ア 特許権：出願から20年、実用新案権：出願から10年
+イ 意匠権：登録から10年、商標権：登録から20年
+ウ 著作権：創作時から50年、特許権：登録から15年
+エ 商標権：出願から20年（更新不可）、意匠権：出願から25年"""
+
+extra_q_12_5 = """11. (2) 権利の発生要件（登録主義と無方式主義）について、適当なものを1つ選びなさい。
+ア 知的財産権はすべて、特許庁に出願し、審査を経て登録されることで初めて権利が発生する「登録主義」を採用している。
+イ 著作権は、著作物を創作した時点で自動的に権利が発生する「無方式主義」をとっており、権利を得るための出願や登録は不要である。
+ウ 特許権と実用新案権は、産業の発展に寄与するため、出願をしなくても発明・考案が完成した時点で権利が発生する。
+エ 商標権は、使用することによって信用が蓄積されるため、特許庁への登録がなくても、使用しているだけで当然に独占的な権利（商標権）が認められる。"""
+
+extra_q_12_6 = """11. (3) 産業財産権（工業所有権）に含まれる権利の組み合わせとして正しいものを選びなさい。
+ア 特許権、著作権、商標権、意匠権
+イ 特許権、実用新案権、意匠権、商標権
+ウ 著作権、著作隣接権、育成者権、回路配置利用権
+エ 特許権、実用新案権、営業秘密、肖像権"""
+
+# --- Series 12: Protection Periods & Key Definitions (Red Text Candidates) ---
+extra_q_12_7 = """12. (1) 知的財産権の「保護期間（存続期間）」について、正しい組み合わせを選びなさい。
+(注意：スライドおよびレジュメの記述に基づく)
+
+ア 特許権：出願から20年（医薬品等は最大25年まで延長可）
+イ 実用新案権：出願から10年
+ウ 意匠権：設定登録の日から25年
+エ 商標権：設定登録の日から10年（ただし、更新により半永久的に存続可能）
+オ 著作権：著作者の死後70年
+
+選択肢：
+① ア・イのみ
+② ア・ウ・エのみ
+③ イ・エ・オのみ
+④ すべて正しい"""
+
+extra_q_12_8 = """12. (2) 特許法における「発明」の定義（重要キーワード）について、( )に入る語句を選びなさい。
+発明とは、「( A )を利用した技術的思想の創作のうち( B )なもの」をいう。
+したがって、万有引力の法則のような「( C )」そのものは、( A )を利用していないため、発明にはあたらない。
+
+ア A: 自然法則 B: 高度 C: 発見
+イ A: 自然法則 B: 新規 C: アイデア
+ウ A: 科学技術 B: 進歩的 C: 理論
+エ A: 産業法則 B: 有用 C: 法則"""
+
+extra_q_12_9 = """12. (3) 商標権の特殊性について、正しい説明を選びなさい。
+ア 商標権は、創作性が求められるため、他人の模倣を防ぐために登録から20年で権利が消滅し、更新することはできない。
+イ 商標権は、業務上の信用（ブランド）を保護する権利であるため、10年ごとの更新登録を行うことで、半永久的に権利を保有し続けることができる。
+ウ 商標権は、使用しなくても登録さえしておけば権利が維持されるため、更新の際に使用実績の証明は一切不要である。
+エ 商標権の保護期間は、著作権と同じく「創作した時」から始まり、死後70年まで続く。"""
+
+# --- Series 13: Protection Periods (Fill-in-the-Blank) ---
+extra_q_12_10 = """12. (4) 知的財産権の保護期間（存続期間）について、( )に入る適切な数字を答えなさい。（各2点・計10点）
+
+1. 特許権の存続期間は、出願の日から（ ① ）年をもって終了する。
+2. 実用新案権の存続期間は、出願の日から（ ② ）年をもって終了する。
+3. 意匠権の存続期間は、設定登録の日から（ ③ ）年をもって終了する。
+4. 商標権の存続期間は、設定登録の日から（ ④ ）年をもって終了するが、申請により更新することができる。
+5. 著作権の保護期間は、原則として著作者の死後（ ⑤ ）年を経過するまでである。
+
+語群（数字）: 10, 15, 20, 25, 50, 70, 100"""
+
+
+extra_q_list_1 = """
+3. (1) 不法行為についての説明を、()に入る適当な語を語群から補いながら、完成させなさい。(各4点・計24点)
+民法は、( ① )活動を保障する立場から、損害賠償責任について( ② )主義と( ③ )原則の2つの原則を基礎としている。
+前者は、自己の責任に何らかの落ち度がなければ、それによって他人に生じた損害賠償責任を負担することはないというものであり、後者は、自己の行動についてのみ責任を負うのであって、他人の行動まで責任を負うものではないというものである。
+しかし、産業技術の高度化にともない...社会生活のなかに危険を作り出した者は、その危険の顕在化に対して責任を負うべきであるという( ④ )主義という考え方、あるいはそれによって利益をあげている者は、それにともなう不利益をも負担するべきであるという( ⑤ )主義という考え方に基づき、過失を要件とすることなく責任を負わせるという( ⑥ )制度も必要となった。
+
+語群: 個人の自由な, 全体主義的な, 無過失責任, 過失責任, 連帯責任, 自己責任, 共有責任, 当事責任, 危険責任, 安全配慮義務, 報償責任
+"""
+
+# 2. Automobile Liability Security Act (Application of Principles)
+extra_q_list_2 = """
+3. (2) 下記は自動車損害賠償保障法3条の中略である。下線①、②の箇所は、それぞれ過失責任主義または無過失責任主義に依拠した条文である。それぞれどちらの主義に依拠しているか答えなさい。(各5点・計10点)
+自動車損害賠償保障法3条: ①自己のために自動車を運行の用に供する者は、その運行によって他人の生命又は身体を害したときは、これによって生じた損害を賠償する責に任する。ただし、②自己および運転者が自動車の運行に関して注意を怠らなかったこと...を証明したときは、この限りでない。
+
+語群: 過失責任主義、無過失責任主義
+"""
+
+# 3. Civil Procedure Terminology
+extra_q_list_3 = """
+3. (3) 交通事故によって損害をこうむった者（以下被害者という）が裁判で解決しようと訴えを提起した。民事裁判上、訴えを提起した者と訴えられた者（加害者）は何と呼ばれるか。語群から選択して答えなさい。（各4点計8点）
+
+語群: 検察官、原告、被告人, 被告
+① 訴えを提起した者（被害者）: ?
+② 訴えられた者（加害者）: ?
+"""
+
+# 4. Real Rights vs Claims (Fill-in-the-blank)
+extra_q_list_4 = """
+4. (1) 下記の物権と債権のそれぞれの特徴の説明を()に入る語句を語群からおぎないながら完成させなさい（同じ語句を複数回使うことがある）。(各3点・計18点)
+物権は特定の( ① )を直接に( ② )する権利である。一方、債権は特定の( ③ )が他の特定の( ④ )に対して、一定の( ⑤ )を( ⑥ )する権利である。
+
+語群: 人, 物, 請求, 支配, 行為
+"""
+
+# 5. Immediate Acquisition & Stolen Goods (Fill-in-the-blank/Select)
+extra_q_list_5 = """
+4. (2) 下記の動産が盗まれた場合の説明を（）にある語句のうち、正しい語句を○で囲みながら完成させなさい。（各3点計15点）
+動産が盗まれた場合、盗取者（盗んだ者）はその動産について行使する権利を①（取得する / 取得しない）。一方、動産を盗まれた所有者の所有権は②（そのままである / 失われてしまう）。
+その後、盗取者が他人にその動産を売却した場合、盗取者からその動産を購入した他人は、その動産について行使する権利を③（取得する / 取得しない）。
+その場合、動産を盗まれた所有者の所有権は④（そのままである / 失われてしまう）。
+動産を盗まれた所有者から、盗取者からその動産を取得した他人に対し、その動産の返還を求められたときは、盗取者からその動産を取得した他人は、返還の請求に⑤（応じる必要はない / 応じなければならない）。
+"""
+
+# 6. Basic Principles of Civil Law (Short Answer/Memorization)
+extra_q_list_6 = """
+【記述式・暗記用】近代民法の「3つの基本原則」を答えなさい。
+"""
+
+# 7. Exceptions to Freedom of Contract (Short Answer/Memorization)
+extra_q_list_7 = """
+【記述式・暗記用】「契約自由の原則」にも例外（制限）があるが、それは何か。民法90条に触れて説明しなさい。
+"""
+
+# 8. Prohibition of Abuse of Rights (Short Answer/Memorization)
+extra_q_list_8 = """
+【記述式・暗記用】「権利濫用の禁止」（民法1条3項）とは何か。判断基準（主観的・客観的）を含めて説明しなさい。
+"""
+
+# 9. Necessity of No-Fault Liability (Short Answer/Memorization)
+extra_q_list_9 = """
+【記述式・暗記用】なぜ現代では「無過失責任」が必要になったのか説明しなさい。（ヒント：報償責任・危険責任）
+"""
+
+
 
 
 
@@ -234,7 +381,31 @@ flashcard_data = {
     extra_q_11_2: "イ (心裡留保は原則有効・悪意なら無効), ウ (虚偽表示は無効・善意第三者に対抗不可) {{Refer: Law11回スライド.pdf (p. 6-7), 11回レジュメLAW.pdf (p. 1)}}",
     extra_q_11_3: "イ (動機が表示されている場合に限り取消可) {{Refer: Law11回スライド.pdf (p. 8, 10), 11回レジュメLAW.pdf (p. 1)}}",
     extra_q_11_4: "ア (詐欺は対抗不可・強迫は対抗可), エ (第三者詐欺の要件) {{Refer: Law11回スライド.pdf (p. 11), 11回レジュメLAW.pdf (p. 1)}}",
-    extra_q_11_5: "イ (無効=最初から, 取消し=遡って) {{Refer: 11回レジュメLAW.pdf (p. 1)}}"
+    extra_q_11_5: "イ (無効=最初から, 取消し=遡って) {{Refer: 11回レジュメLAW.pdf (p. 1)}}",
+
+    # Series 10
+    extra_q_12_1: "イ (プログラム), エ (建築の著作物) {{Refer: Law12回スライド.pdf (p. 24-25, Teacher's Hint)}}",
+    extra_q_12_2: "イ (A:著作権, B:組立家屋, C:意匠権) {{Refer: Teacher's Hint (原則=著作権, 例外=組立家屋=意匠権)}}",
+    extra_q_12_3: "イ (著作権=相対的, 意匠権=絶対的) {{Refer: Law12回スライド.pdf (p. 9)}}",
+    # Series 11
+    extra_q_12_4: "ア (特許=20年, 実用新案=10年) {{Refer: Law12回スライド.pdf (p. 25-26), 12回レジュメLAW.pdf (p. 1)}}",
+    extra_q_12_5: "イ (著作権=無方式主義) {{Refer: Law12回スライド.pdf (p. 23-24: '創作的に表現したもの'で発生)}}",
+    extra_q_12_6: "イ (産業財産権の4つ) {{Refer: Law12回スライド.pdf (p. 3, 26), 12回レジュメLAW.pdf (p. 1)}}",
+    # Series 12
+    extra_q_12_7: "④ すべて正しい {{Refer: 12回レジュメLAW.pdf (p.1), Law12回スライド.pdf (p.14, 21, 25-26)}}",
+    extra_q_12_8: "ア (A:自然法則, B:高度, C:発見) {{Refer: Law12回スライド.pdf (p. 4: 発明の定義)}}",
+    extra_q_12_9: "イ (10年更新・半永久的) {{Refer: Law12回スライド.pdf (p. 21)}}",
+    # Series 13
+    extra_q_12_10: "①20, ②10, ③25, ④10, ⑤70 {{Refer: 12回レジュメLAW.pdf (p.1), Law12回スライド.pdf (p.14, 21, 25-26)}}",
+    extra_q_list_1: "①個人の自由な, ②過失責任, ③自己責任, ④危険責任, ⑤報償責任, ⑥無過失責任 {{Refer: 8回レジュメLAW.pdf (p.1), Law8回スライド.pdf (p.15-19)}}",
+    extra_q_list_2: "①無過失責任主義, ②過失責任主義 {{Refer: 8回レジュメLAW.pdf (p.1 - Principles applied to new context)}}",
+    extra_q_list_3: "①原告, ②被告 {{Refer: General Legal Knowledge (Not explicitly in Lectures 8-12, but relevant to 'Civil Procedure')}}",
+    extra_q_list_4: "①物, ②支配, ③人, ④人, ⑤行為, ⑥請求 {{Refer: 9回レジュメLAW.pdf (p.1 - 2.物を所有するとは)}}",
+    extra_q_list_5: "①取得しない, ②そのままである, ③取得する (即時取得), ④失われてしまう, ⑤応じなければならない (盗品回復請求権) {{Refer: Law10回スライド.pdf (p.11-14), 10回レジュメLAW.pdf}}",
+    extra_q_list_6: "1. 所有権絶対の原則, 2. 私的自治の原則, 3. 過失責任の原則 {{Refer: 8回レジュメLAW.pdf}}",
+    extra_q_list_7: "公の秩序や善良な風俗に反する内容（公序良俗違反）は、合意があっても無効となる。 {{Refer: Law8回スライド.pdf (p.13-14)}}",
+    extra_q_list_8: "権利の行使でも他人に不当な損害を与える場合は許されない。基準：1.主観的（嫌がらせ目的）, 2.客観的（利益と損害のバランス）。 {{Refer: Law9回スライド.pdf (p.8)}}",
+    extra_q_list_9: "被害者が過失を証明するのが難しいため、利益を得ている者（報償責任）や危険を作り出した者（危険責任）に責任を負わせるため。 {{Refer: Law8回スライド.pdf (p.19)}}"
 
 }
 
@@ -488,7 +659,164 @@ B. A: The beginning, B: Retroactively (from the beginning)
 C. A: The beginning, B: From the time of cancellation
 D. A: The time of judgment, B: Retroactively (from the beginning)""",
         "answer": "B (Invalidity=From start, Cancel=Retroactive) {{Refer: 11回レジュメLAW.pdf (p. 1)}}"
+    },
+
+    extra_q_12_1: {
+        "question": """10. (1) Select two appropriate examples of 'Works' protected under Copyright Law.
+A. Technical ideas (ideas themselves) utilizing natural laws. (This is Patent).
+B. Computer Programs (source code, etc.).
+C. Designs of shapes, patterns, or colors of articles that appeal to the eye. (This is Design Right).
+D. Architectural Works (Artistic buildings or general buildings).""",
+        "answer": "B (Programs), D (Architecture) {{Refer: Law12回スライド.pdf (p. 24-25, Teacher's Hint)}}"
+    },
+    extra_q_12_2: {
+        "question": """10. (2) Select the correct combination of words regarding the legal protection of buildings.
+In principle, buildings are protected by '( A )'. However, '( B )', such as prefabricated houses, have a strong aspect of being mass-produced industrial products, so they are exceptionally protected by '( C )'.
+
+A. A: Patent Right, B: Custom-built houses, C: Utility Model Right
+B. A: Copyright, B: Assembly Houses (Mass-produced houses), C: Design Right
+C. A: Design Right, B: Commercial buildings, C: Trademark Right
+D. A: Copyright, B: Reinforced concrete structures, C: Patent Right""",
+        "answer": "B (A: Copyright, B: Assembly Houses, C: Design Right) {{Refer: Teacher's Hint}}"
+    },
+    extra_q_12_3: {
+        "question": """10. (3) Select one correct statement regarding the difference between Copyright and Design Right.
+A. Design Right adopts 'Non-formality' where rights arise upon creation, whereas Copyright adopts 'Registration Principle' requiring application to the Patent Office. (False: Opposite).
+B. Copyright is a 'Relative Monopoly' that does not extend to someone who independently created the same work by chance, whereas Design Right is an 'Absolute Monopoly' that can be enforced even against independent creators of similar designs once registered.
+C. The protection period for Copyright is generally 70 years after death, whereas for Design Right it is 50 years from registration. (False: Design is 25 years).
+D. Programs are primarily protected by 'Design Right' because they are used as industrial products, and buildings are protected by 'Patent Right'. (False: Programs/Buildings = Copyright).""",
+        "answer": "B (Copyright=Relative, Design=Absolute) {{Refer: Law12回スライド.pdf (p. 9)}}"
+    },
+    # Series 11
+    extra_q_12_4: {
+        "question": """11. (1) Select the correct combination regarding the Duration of Intellectual Property Rights.
+A. Patent Right: 20 years from application, Utility Model Right: 10 years from application.
+B. Design Right: 10 years from registration, Trademark Right: 20 years from registration. (False: Design is 25y, Trademark is 10y).
+C. Copyright: 50 years from creation, Patent Right: 15 years from registration. (False: Copyright is 70y post-mortem).
+D. Trademark Right: 20 years from application (Not renewable), Design Right: 25 years from application. (False: Trademark is 10y renewable).""",
+        "answer": "A (Patent=20y, Utility Model=10y) {{Refer: Law12回スライド.pdf (p. 25-26), 12回レジュメLAW.pdf (p. 1)}}"
+    },
+    extra_q_12_5: {
+        "question": """11. (2) Select one correct statement regarding the Requirements for Right Generation (Registration Principle vs. Non-formality).
+A. All intellectual property rights adopt the 'Registration Principle', meaning rights arise only after application to the Patent Office, examination, and registration. (False: Copyright is an exception).
+B. Copyright adopts 'Non-formality', where rights arise automatically at the moment the work is created; no application or registration is needed to obtain the right.
+C. Patent Rights and Utility Model Rights arise automatically at the moment the invention/device is completed to contribute to industrial development, without application. (False: Need registration).
+D. Trademark Rights are recognized as exclusive rights solely by usage without registration at the Patent Office, because trust is accumulated through use. (False: Need registration).""",
+        "answer": "B (Copyright = Automatic/Non-formality) {{Refer: Law12回スライド.pdf (p. 23-24)}}"
+    },
+    extra_q_12_6: {
+        "question": """11. (3) Select the correct combination of rights included in 'Industrial Property Rights'.
+A. Patent Right, Copyright, Trademark Right, Design Right.
+B. Patent Right, Utility Model Right, Design Right, Trademark Right.
+C. Copyright, Neighboring Rights, Breeder's Right, Circuit Layout Right.
+D. Patent Right, Utility Model Right, Trade Secrets, Right of Publicity.""",
+        "answer": "B (The 4 Industrial Property Rights) {{Refer: Law12回スライド.pdf (p. 3, 26), 12回レジュメLAW.pdf (p. 1)}}"
+    },
+    # Series 12
+    extra_q_12_7: {
+        "question": """12. (1) Select the option where ALL combinations of Intellectual Property Rights and their 'Protection Periods' are correct. (Based on Resume/Slides)
+A. Patent Right: 20 years from application (Extendable to 25 for pharmaceuticals).
+B. Utility Model Right: 10 years from application.
+C. Design Right: 25 years from Registration. (Note: Slide p.14 says 'From Registration').
+D. Trademark Right: 10 years from Registration (Renewable semi-permanently).
+E. Copyright: 70 years after the author's death.
+
+Options:
+1. A and B only
+2. A, C, and D only
+3. B, D, and E only
+4. All are correct""",
+        "answer": "4. All are correct {{Refer: 12回レジュメLAW.pdf (p.1), Law12回スライド.pdf (p.14, 21, 25-26)}}"
+    },
+    extra_q_12_8: {
+        "question": """12. (2) Select the correct words for the definition of 'Invention' in Patent Law (Important Keywords).
+Invention is defined as "the highly ( B ) creation of technical ideas utilizing ( A )".
+Therefore, a "( C )" itself, such as the law of universal gravitation, is not an invention because it does not utilize ( A ).
+
+A. A: Natural Laws, B: Advanced, C: Discovery
+B. A: Natural Laws, B: Novel, C: Idea
+C. A: Science Technology, B: Progressive, C: Theory
+D. A: Industrial Laws, B: Useful, C: Law""",
+        "answer": "A (A: Natural Laws, B: Advanced, C: Discovery) {{Refer: Law12回スライド.pdf (p. 4)}}"
+    },
+    extra_q_12_9: {
+        "question": """12. (3) Select the correct explanation regarding the uniqueness of Trademark Rights.
+A. Trademark rights require creativity, so to prevent imitation, rights expire 20 years after registration and cannot be renewed.
+B. Trademark rights protect business goodwill (brand), so by renewing the registration every 10 years, the rights can be held semi-permanently.
+C. Trademark rights are maintained as long as they are registered even if not used, so proof of use is never required for renewal.
+D. The protection period of trademark rights begins from the 'time of creation' like copyright and lasts until 70 years after death.""",
+        "answer": "B (10 years renewable / Semi-permanent) {{Refer: Law12回スライド.pdf (p. 21)}}"
+    },
+    # Series 13
+    extra_q_12_10: {
+        "question": """12. (4) Fill in the blanks with the appropriate numbers regarding the protection period (duration) of intellectual property rights. (2 points each, Total 10 points)
+
+1. The duration of a Patent Right expires ( ① ) years after the filing date of the application.
+2. The duration of a Utility Model Right expires ( ② ) years after the filing date of the application.
+3. The duration of a Design Right expires ( ③ ) years after the date of registration.
+4. The duration of a Trademark Right expires ( ④ ) years after the date of registration, but can be renewed upon application.
+5. The protection period of Copyright generally lasts until ( ⑤ ) years have passed after the author's death.
+
+Word Group (Numbers): 10, 15, 20, 25, 50, 70, 100""",
+        "answer": "1: 20, 2: 10, 3: 25, 4: 10, 5: 70 {{Refer: 12回レジュメLAW.pdf (p.1), Law12回スライド.pdf (p.14, 21, 25-26)}}"
+    },
+
+    extra_q_list_1: {
+        "question": """3. (1) Complete the explanation about Torts by filling in the blanks.
+Civil law is based on two principles: ( ② ) Principle and ( ③ ) Principle, from the standpoint of guaranteeing ( ① ) activities.
+The former means that if there is no fault in one's own responsibility, one does not bear liability for damages caused to others. The latter means that one bears responsibility only for one's own actions, not for the actions of others.
+However, with the advancement of industrial technology... a system of ( ⑥ ) became necessary, where liability is imposed without requiring negligence. This is based on the idea of ( ④ ) Liability (he who created the danger should bear responsibility) or ( ⑤ ) Liability (he who profits should also bear the loss).
+
+Word Group: Personal freedom, Totalitarian, No-Fault Liability, Fault Liability, Joint Liability, Self-Responsibility, Shared Liability, Party Liability, Risk Liability, Safety Obligation, Reward Liability""",
+        "answer": "1: Personal freedom, 2: Fault Liability, 3: Self-Responsibility, 4: Risk Liability, 5: Reward Liability, 6: No-Fault Liability"
+    },
+    extra_q_list_2: {
+        "question": """3. (2) Regarding Article 3 of the Automobile Liability Security Act below, state whether the underlined parts ① and ② rely on 'Fault Liability Principle' or 'No-Fault Liability Principle'.
+Article 3: ① A person who operates an automobile for their own benefit shall be liable to compensate for damages if they harm another person's life or body by such operation. However, ② this shall not apply if they prove that they and the driver did not neglect due care regarding the operation...
+
+Word Group: Fault Liability Principle, No-Fault Liability Principle""",
+        "answer": "1: No-Fault Liability Principle, 2: Fault Liability Principle"
+    },
+    extra_q_list_3: {
+        "question": """3. (3) A person who suffered damages from a traffic accident (Victim) filed a lawsuit to resolve it in court. In a civil trial, what are the person who filed the suit and the person being sued (Perpetrator) called? Select from the word group.
+
+Word Group: Prosecutor, Plaintiff, Accused/Defendant(Criminal), Defendant(Civil)
+① Person who filed the suit (Victim): ?
+② Person sued (Perpetrator): ?""",
+        "answer": "1: Plaintiff (Genkoku), 2: Defendant (Hikoku)"
+    },
+    extra_q_list_4: {
+        "question": """4. (1) Complete the explanation of the characteristics of Real Rights and Claims.
+Real Rights are rights to directly ( ② ) a specific ( ① ). On the other hand, Claims are rights where a specific ( ③ ) requests a specific ( ⑤ ) from another specific ( ④ ).
+
+Word Group: Person, Thing/Object, Request, Control/Dominate, Act/Performance""",
+        "answer": "1: Thing, 2: Control, 3: Person, 4: Person, 5: Act, 6: Request"
+    },
+    extra_q_list_5: {
+        "question": """4. (2) Select the correct phrase regarding the case where a movable is stolen.
+When a movable is stolen, the thief ①(acquires / does not acquire) the right to exercise over it. Meanwhile, the ownership of the victim ②(remains as is / is lost).
+Later, if the thief sells the movable to another person, the other person who bought it from the thief ③(acquires / does not acquire) the right (Immediate Acquisition).
+In that case, the victim's ownership ④(remains as is / is lost).
+When the victim demands the return of the movable from the person who acquired it from the thief, that person ⑤(does not need to respond / must respond) to the return request (under the stolen goods exception).""",
+        "answer": "1: does not acquire, 2: remains as is, 3: acquires, 4: is lost, 5: must respond"
+    },
+    extra_q_list_6: {
+        "question": """[Memorization] Name the "Three Basic Principles" of modern Civil Law.""",
+        "answer": "1. Absolute Property Ownership, 2. Private Autonomy, 3. Principle of Negligence Liability"
+    },
+    extra_q_list_7: {
+        "question": """[Memorization] There is an exception (restriction) to the "Principle of Freedom of Contract". What is it? Explain by touching upon Civil Code Article 90.""",
+        "answer": "Contracts that violate public order or good morals are void even if there is an agreement (Art 90)."
+    },
+    extra_q_list_8: {
+        "question": """[Memorization] What is the "Prohibition of Abuse of Rights" (Civil Code Art 1, Para 3)? Explain including the criteria (subjective/objective).""",
+        "answer": "Exercise of rights that unjustly harms others is not permitted. Criteria: 1. Subjective (Intent to harm), 2. Objective (Balance of interests)."
+    },
+    extra_q_list_9: {
+        "question": """[Memorization] Explain why "No-Fault Liability" became necessary in modern society. (Hint: Reward Liability, Risk Liability)""",
+        "answer": "Because it is difficult for victims to prove negligence in modern accidents. Liability is imposed on those who profit (Reward) or create risk (Risk)."
     }
+    
 }
    
 
@@ -744,5 +1072,162 @@ D. ต้องมีการจดทะเบียน
 ค. A: เริ่มแรก, B: นับจากเวลาที่เพิกถอน
 ง. A: เวลาที่มีคำพิพากษา, B: ย้อนหลัง (ตั้งแต่เริ่มแรก)""",
         "answer": "ข (โมฆะ=เริ่มแรก, เพิกถอน=ย้อนหลัง) {{Refer: 11回レジュメLAW.pdf (p. 1)}}"
+    },
+
+    # Series 10
+    extra_q_12_1: {
+        "question": """10. (1) จงเลือกตัวอย่างที่เหมาะสม 2 ข้อของ 'งานอันมีลิขสิทธิ์' ที่ได้รับความคุ้มครองตามกฎหมายลิขสิทธิ์
+ก. ความคิดทางเทคนิค (ไอเดีย) ที่ใช้กฎธรรมชาติ (นี่คือสิทธิบัตร)
+ข. โปรแกรมคอมพิวเตอร์ (ซอร์สโค้ด ฯลฯ)
+ค. การออกแบบรูปร่าง ลวดลาย หรือสีสันของวัตถุที่ดึงดูดสายตา (นี่คือสิทธิบัตรการออกแบบ/意匠権)
+ง. งานสถาปัตยกรรม (อาคารที่มีศิลปะหรืออาคารทั่วไป)""",
+        "answer": "ข (โปรแกรม), ง (งานสถาปัตยกรรม) {{Refer: Law12回スライド.pdf (p. 24-25, Teacher's Hint)}}"
+    },
+    extra_q_12_2: {
+        "question": """10. (2) จงเลือกคู่คำที่ถูกต้องเกี่ยวกับการคุ้มครองทางกฎหมายของอาคาร
+โดยหลักการแล้ว อาคารจะได้รับความคุ้มครองโดย '( A )' อย่างไรก็ตาม '( B )' เช่น บ้านสำเร็จรูป มีลักษณะเป็นผลิตภัณฑ์อุตสาหกรรมที่ผลิตจำนวนมาก จึงได้รับความคุ้มครองโดย '( C )' เป็นข้อยกเว้น
+
+ก. A: สิทธิบัตร, B: บ้านสั่งสร้าง, C: อนุสิทธิบัตร
+ข. A: ลิขสิทธิ์, B: บ้านประกอบ/บ้านสำเร็จรูป (Assembly Houses), C: สิทธิบัตรการออกแบบ (Design Right)
+ค. A: สิทธิบัตรการออกแบบ, B: อาคารพาณิชย์, C: เครื่องหมายการค้า
+ง. A: ลิขสิทธิ์, B: โครงสร้างคอนกรีตเสริมเหล็ก, C: สิทธิบัตร""",
+        "answer": "ข (A: ลิขสิทธิ์, B: บ้านประกอบ, C: สิทธิบัตรการออกแบบ) {{Refer: Teacher's Hint}}"
+    },
+    extra_q_12_3: {
+        "question": """10. (3) จงเลือกข้อความที่ถูกต้อง 1 ข้อเกี่ยวกับความแตกต่างระหว่างลิขสิทธิ์และสิทธิบัตรการออกแบบ
+ก. สิทธิบัตรการออกแบบใช้ระบบ 'ไม่ต้องมีแบบพิธี' (สิทธิเกิดทันทีที่สร้าง) ส่วนลิขสิทธิ์ใช้ 'ระบบการจดทะเบียน' (ผิด: สลับกัน)
+ข. ลิขสิทธิ์เป็น 'สิทธิผูกขาดแบบสัมพัทธ์' (Relative Monopoly) ซึ่งไม่ครอบคลุมถึงผู้ที่สร้างสรรค์ผลงานเหมือนกันโดยบังเอิญ แต่สิทธิบัตรการออกแบบเป็น 'สิทธิผูกขาดแบบเด็ดขาด' (Absolute Monopoly) ซึ่งเมื่อจดทะเบียนแล้วสามารถบังคับใช้กับผู้ที่ออกแบบคล้ายกันได้แม้จะสร้างขึ้นเองโดยอิสระ
+ค. ระยะเวลาคุ้มครองลิขสิทธิ์คือ 70 ปีหลังเสียชีวิต แต่สิทธิบัตรการออกแบบคือ 50 ปีนับจากวันจดทะเบียน (ผิด: ออกแบบคือ 25 ปี)
+ง. โปรแกรมได้รับความคุ้มครองโดย 'สิทธิบัตรการออกแบบ' และอาคารได้รับความคุ้มครองโดย 'สิทธิบัตร' (ผิด: ทั้งคู่คือลิขสิทธิ์)""",
+        "answer": "ข (ลิขสิทธิ์=สัมพัทธ์, ออกแบบ=เด็ดขาด) {{Refer: Law12回スライド.pdf (p. 9)}}"
+    },
+    # Series 11
+    extra_q_12_4: {
+        "question": """11. (1) จงเลือกคู่ที่ถูกต้องเกี่ยวกับระยะเวลาคุ้มครอง (Duration) ของทรัพย์สินทางปัญญา
+ก. สิทธิบัตร: 20 ปีนับจากวันยื่นคำขอ, อนุสิทธิบัตร: 10 ปีนับจากวันยื่นคำขอ
+ข. สิทธิบัตรการออกแบบ: 10 ปีนับจากวันจดทะเบียน, เครื่องหมายการค้า: 20 ปีนับจากวันจดทะเบียน (ผิด: ออกแบบ 25 ปี, เครื่องหมายการค้า 10 ปี)
+ค. ลิขสิทธิ์: 50 ปีนับจากวันสร้างสรรค์, สิทธิบัตร: 15 ปีนับจากวันจดทะเบียน (ผิด: ลิขสิทธิ์ 70 ปีหลังเสียชีวิต)
+ง. เครื่องหมายการค้า: 20 ปีนับจากวันยื่นคำขอ (ต่ออายุไม่ได้), สิทธิบัตรการออกแบบ: 25 ปีนับจากวันยื่นคำขอ (ผิด: เครื่องหมายการค้า 10 ปี ต่ออายุได้)""",
+        "answer": "ก (สิทธิบัตร=20ปี, อนุสิทธิบัตร=10ปี) {{Refer: Law12回スライド.pdf (p. 25-26), 12回レジュメLAW.pdf (p. 1)}}"
+    },
+    extra_q_12_5: {
+        "question": """11. (2) จงเลือกข้อความที่ถูกต้อง 1 ข้อเกี่ยวกับเงื่อนไขการเกิดสิทธิ (หลักการจดทะเบียน vs หลักความไม่มีรูปแบบ)
+ก. ทรัพย์สินทางปัญญาทุกประเภทใช้ 'ระบบการจดทะเบียน' ซึ่งสิทธิจะเกิดขึ้นก็ต่อเมื่อยื่นคำขอต่อกรมทรัพย์สินทางปัญญา ผ่านการตรวจสอบ และจดทะเบียนเท่านั้น (ผิด: ลิขสิทธิ์เป็นข้อยกเว้น)
+ข. ลิขสิทธิ์ใช้ 'หลักความไม่มีรูปแบบ' (Non-formality) ซึ่งสิทธิจะเกิดขึ้นโดยอัตโนมัติทันทีที่ผลงานถูกสร้างสรรค์ขึ้น ไม่จำเป็นต้องยื่นคำขอหรือจดทะเบียนเพื่อให้ได้สิทธิ
+ค. สิทธิบัตรและอนุสิทธิบัตรเกิดขึ้นโดยอัตโนมัติทันทีที่การประดิษฐ์หรือการออกแบบเสร็จสมบูรณ์โดยไม่ต้องยื่นคำขอ (ผิด: ต้องจดทะเบียน)
+ง. สิทธิในเครื่องหมายการค้าได้รับการยอมรับว่าเป็นสิทธิผูกขาดโดยการใช้งานเพียงอย่างเดียวโดยไม่ต้องจดทะเบียนกับกรมทรัพย์สินทางปัญญา (ผิด: ต้องจดทะเบียน)""",
+        "answer": "ข (ลิขสิทธิ์ = เกิดอัตโนมัติ) {{Refer: Law12回スライド.pdf (p. 23-24)}}"
+    },
+    extra_q_12_6: {
+        "question": """11. (3) จงเลือกกลุ่มของสิทธิที่จัดอยู่ใน 'ทรัพย์สินทางอุตสาหกรรม' (Industrial Property Rights) ที่ถูกต้อง
+ก. สิทธิบัตร, ลิขสิทธิ์, เครื่องหมายการค้า, สิทธิบัตรการออกแบบ
+ข. สิทธิบัตร, อนุสิทธิบัตร, สิทธิบัตรการออกแบบ, เครื่องหมายการค้า
+ค. ลิขสิทธิ์, สิทธิข้างเคียง, สิทธิของนักปรับปรุงพันธุ์พืช, สิทธิในแบบผังภูมิวงจรรวม
+ง. สิทธิบัตร, อนุสิทธิบัตร, ความลับทางการค้า, สิทธิในชื่อเสียง (Right of Publicity)""",
+        "answer": "ข (4 ประเภทของทรัพย์สินทางอุตสาหกรรม) {{Refer: Law12回スライド.pdf (p. 3, 26), 12回レジュメLAW.pdf (p. 1)}}"
+    },
+    # Series 12
+    extra_q_12_7: {
+        "question": """12. (1) จงเลือกตัวเลือกที่จับคู่ 'ระยะเวลาคุ้มครอง' ของทรัพย์สินทางปัญญาได้ถูกต้องทั้งหมด (ตามเอกสารสรุป/สไลด์)
+ก. สิทธิบัตร: 20 ปีนับจากวันยื่นคำขอ (ขยายได้ถึง 25 ปีสำหรับยา)
+ข. อนุสิทธิบัตร: 10 ปีนับจากวันยื่นคำขอ
+ค. สิทธิบัตรการออกแบบ: 25 ปีนับจากวันจดทะเบียน (หมายเหตุ: สไลด์หน้า 14 ระบุว่า 'นับจากวันจดทะเบียน')
+ง. เครื่องหมายการค้า: 10 ปีนับจากวันจดทะเบียน (ต่ออายุได้เรื่อยๆ กึ่งถาวร)
+จ. ลิขสิทธิ์: 70 ปีหลังผู้สร้างสรรค์เสียชีวิต
+
+ตัวเลือก:
+1. ก และ ข เท่านั้น
+2. ก, ค และ ง เท่านั้น
+3. ข, ง และ จ เท่านั้น
+4. ถูกทุกข้อ""",
+        "answer": "4. ถูกทุกข้อ {{Refer: 12回レジュメLAW.pdf (p.1), Law12回スライド.pdf (p.14, 21, 25-26)}}"
+    },
+    extra_q_12_8: {
+        "question": """12. (2) จงเลือกคำที่ถูกต้องสำหรับนิยามของ 'การประดิษฐ์' ในกฎหมายสิทธิบัตร (คำสำคัญ)
+การประดิษฐ์คือ "การสร้างสรรค์ความคิดทางเทคนิคระดับ ( B ) โดยใช้ ( A )"
+ดังนั้น "( C )" เช่น กฎแรงโน้มถ่วงสากล จึงไม่ใช่การประดิษฐ์เพราะไม่ได้ใช้ ( A )
+
+ก. A: กฎธรรมชาติ, B: สูง/ก้าวหน้า, C: การค้นพบ
+ข. A: กฎธรรมชาติ, B: ใหม่, C: ไอเดีย
+ค. A: เทคโนโลยีวิทยาศาสตร์, B: ก้าวหน้า, C: ทฤษฎี
+ง. A: กฎอุตสาหกรรม, B: มีประโยชน์, C: กฎหมาย""",
+        "answer": "ก (A: กฎธรรมชาติ, B: ขั้นสูง, C: การค้นพบ) {{Refer: Law12回スライド.pdf (p. 4)}}"
+    },
+    extra_q_12_9: {
+        "question": """12. (3) จงเลือกคำอธิบายที่ถูกต้องเกี่ยวกับความพิเศษของสิทธิในเครื่องหมายการค้า
+ก. สิทธิในเครื่องหมายการค้าต้องการความสร้างสรรค์ ดังนั้นเพื่อป้องกันการลอกเลียนแบบ สิทธิจะหมดอายุ 20 ปีหลังจดทะเบียนและไม่สามารถต่ออายุได้
+ข. สิทธิในเครื่องหมายการค้าคุ้มครองความน่าเชื่อถือทางธุรกิจ (แบรนด์) ดังนั้นการต่ออายุการจดทะเบียนทุกๆ 10 ปี จะทำให้สามารถถือครองสิทธิได้แบบกึ่งถาวร
+ค. สิทธิในเครื่องหมายการค้าจะคงอยู่ตราบเท่าที่จดทะเบียนไว้แม้จะไม่ได้ใช้งาน ดังนั้นจึงไม่ต้องพิสูจน์การใช้งานเมื่อต่ออายุ
+ง. ระยะเวลาคุ้มครองเครื่องหมายการค้าเริ่มจาก 'เวลาที่สร้างสรรค์' เช่นเดียวกับลิขสิทธิ์ และคงอยู่จนถึง 70 ปีหลังเสียชีวิต""",
+        "answer": "ข (10 ปี ต่ออายุได้ / กึ่งถาวร) {{Refer: Law12回スライド.pdf (p. 21)}}"
+    },
+    # Series 13
+    extra_q_12_10: {
+        "question": """12. (4) จงเติมตัวเลขที่ถูกต้องลงในช่องว่างเกี่ยวกับระยะเวลาการคุ้มครองทรัพย์สินทางปัญญา (ข้อละ 2 คะแนน รวม 10 คะแนน)
+
+1. ระยะเวลาของสิทธิบัตรจะสิ้นสุดลง ( ① ) ปี นับจากวันยื่นคำขอ
+2. ระยะเวลาของอนุสิทธิบัตรจะสิ้นสุดลง ( ② ) ปี นับจากวันยื่นคำขอ
+3. ระยะเวลาของสิทธิบัตรการออกแบบจะสิ้นสุดลง ( ③ ) ปี นับจากวันจดทะเบียน
+4. ระยะเวลาของสิทธิในเครื่องหมายการค้าจะสิ้นสุดลง ( ④ ) ปี นับจากวันจดทะเบียน แต่สามารถต่ออายุได้เมื่อยื่นคำขอ
+5. ระยะเวลาคุ้มครองลิขสิทธิ์โดยทั่วไปจะคงอยู่จนกว่าจะครบ ( ⑤ ) ปี หลังจากผู้สร้างสรรค์เสียชีวิต
+
+กลุ่มคำ (ตัวเลข): 10, 15, 20, 25, 50, 70, 100""",
+        "answer": "1: 20, 2: 10, 3: 25, 4: 10, 5: 70 {{Refer: 12回レジュメLAW.pdf (p.1), Law12回スライド.pdf (p.14, 21, 25-26)}}"
+    },
+
+    extra_q_list_1: {
+        "question": """3. (1) จงเติมคำในช่องว่างเพื่ออธิบายเรื่องการละเมิด
+กฎหมายแพ่งตั้งอยู่บนพื้นฐานของหลักการ 2 ประการ คือ หลัก ( ② ) และหลัก ( ③ ) เพื่อรับรองกิจกรรมที่ ( ① )
+หลักแรกหมายความว่าหากไม่มีความผิดในความรับผิดชอบของตนเอง ก็ไม่ต้องรับผิดชดใช้ค่าเสียหายแก่ผู้อื่น ส่วนหลักหลังหมายความว่าบุคคลจะรับผิดชอบเฉพาะการกระทำของตนเองเท่านั้น ไม่รวมถึงการกระทำของผู้อื่น
+อย่างไรก็ตาม ด้วยความก้าวหน้าทางเทคโนโลยีอุตสาหกรรม... จึงจำเป็นต้องมีระบบ ( ⑥ ) ซึ่งกำหนดความรับผิดโดยไม่ต้องมีความประมาทเลินเล่อ โดยอาศัยแนวคิดเรื่อง ความรับผิด ( ④ ) (ผู้สร้างความเสี่ยงต้องรับผิด) หรือ ความรับผิด ( ⑤ ) (ผู้ได้รับผลประโยชน์ต้องรับภาระขาดทุนด้วย)
+
+กลุ่มคำ: อิสระของปัจเจกบุคคล, เผด็จการ, ความรับผิดโดยไม่มีความผิด, ความรับผิดเมื่อมีกระทำผิด/ความประมาท, ความรับผิดร่วม, ความรับผิดชอบของตนเอง, ความรับผิดชอบร่วมกัน, ความรับผิดของคู่สัญญา, ความรับผิดเสี่ยงภัย, หน้าที่คำนึงถึงความปลอดภัย, ความรับผิดเพื่อตอบแทน""",
+        "answer": "1: อิสระของปัจเจกบุคคล, 2: ความรับผิดเมื่อมีกระทำผิด, 3: ความรับผิดชอบของตนเอง, 4: ความรับผิดเสี่ยงภัย, 5: ความรับผิดเพื่อตอบแทน, 6: ความรับผิดโดยไม่มีความผิด"
+    },
+    extra_q_list_2: {
+        "question": """3. (2) เกี่ยวกับมาตรา 3 ของพ.ร.บ. คุ้มครองผู้ประสบภัยจากรถ ด้านล่างนี้ จงระบุว่าส่วนที่ขีดเส้นใต้ ① และ ② อาศัยหลัก 'ความรับผิดเมื่อมีกระทำผิด' (Fault Liability) หรือ 'ความรับผิดโดยไม่มีความผิด' (No-Fault Liability)
+มาตรา 3: ① ผู้ที่นำรถยนต์มาใช้เพื่อประโยชน์ของตนเอง ต้องรับผิดชดใช้ค่าเสียหายหากทำให้ผู้อื่นเสียชีวิตหรือได้รับบาดเจ็บจากการใช้รถนั้น อย่างไรก็ตาม ② หากพิสูจน์ได้ว่าตนเองและผู้ขับขี่ไม่ได้ละเลยความระมัดระวัง... จะไม่ต้องรับผิด
+
+กลุ่มคำ: หลักความรับผิดเมื่อมีกระทำผิด, หลักความรับผิดโดยไม่มีความผิด""",
+        "answer": "1: หลักความรับผิดโดยไม่มีความผิด, 2: หลักความรับผิดเมื่อมีกระทำผิด"
+    },
+    extra_q_list_3: {
+        "question": """3. (3) ผู้ที่ได้รับความเสียหายจากอุบัติเหตุจราจร (ผู้เสียหาย) ได้ยื่นฟ้องต่อศาลเพื่อแก้ไขปัญหา ในคดีแพ่ง ผู้ที่ยื่นฟ้องและผู้ที่ถูกฟ้อง (ผู้กระทำผิด) เรียกว่าอะไร จงเลือกจากกลุ่มคำ
+
+กลุ่มคำ: อัยการ, โจทก์, จำเลย (คดีอาญา), จำเลย (คดีแพ่ง)
+① ผู้ยื่นฟ้อง (ผู้เสียหาย): ?
+② ผู้ถูกฟ้อง (ผู้กระทำผิด): ?""",
+        "answer": "1: โจทก์ (Genkoku), 2: จำเลย (Hikoku - ไม่มีคำว่า 'คน')"
+    },
+    extra_q_list_4: {
+        "question": """4. (1) จงเติมคำในช่องว่างเพื่ออธิบายลักษณะของทรัพยสิทธิและบุคคลสิทธิ
+ทรัพยสิทธิคือสิทธิในการ ( ② ) ( ① ) ที่เฉพาะเจาะจงโดยตรง ในทางกลับกัน บุคคลสิทธิคือสิทธิที่ ( ③ ) ที่เฉพาะเจาะจงเรียกร้องให้ ( ④ ) ที่เฉพาะเจาะจงกระทำ ( ⑤ ) อย่างใดอย่างหนึ่ง ( ⑥ )
+
+กลุ่มคำ: คน, สิ่งของ/ทรัพย์สิน, เรียกร้อง, ครอบครอง/ควบคุม, การกระทำ""",
+        "answer": "1: สิ่งของ, 2: ครอบครอง/ควบคุม, 3: คน, 4: คน, 5: การกระทำ, 6: เรียกร้อง"
+    },
+    extra_q_list_5: {
+        "question": """4. (2) จงเลือกคำที่ถูกต้องเกี่ยวกับกรณีที่สังหาริมทรัพย์ถูกขโมย
+หากสังหาริมทรัพย์ถูกขโมย ขโมย (ผู้ลักทรัพย์) ①(ได้มาซึ่ง / ไม่ได้มาซึ่ง) สิทธิที่จะใช้ทรัพย์สินนั้น ในขณะที่กรรมสิทธิ์ของผู้เสียหาย ②(ยังคงอยู่ / สูญเสียไป)
+ต่อมา หากขโมยขายทรัพย์สินนั้นให้ผู้อื่น และผู้อื่นซื้อไปโดยสุจริต ผู้อื่นนั้น ③(ได้มาซึ่ง / ไม่ได้มาซึ่ง) สิทธิในทรัพย์สินนั้น (การได้มาทันที)
+ในกรณีนั้น กรรมสิทธิ์ของผู้เสียหาย ④(ยังคงอยู่ / สูญเสียไป)
+เมื่อผู้เสียหายเรียกร้องให้คืนทรัพย์สินจากผู้ที่ซื้อต่อจากขโมย ผู้นั้น ⑤(ไม่จำเป็นต้องตอบสนอง / ต้องตอบสนอง) ต่อคำขอคืน (ภายใต้ข้อยกเว้นเรื่องของโจร)""",
+        "answer": "1: ไม่ได้มาซึ่ง, 2: ยังคงอยู่, 3: ได้มาซึ่ง, 4: สูญเสียไป, 5: ต้องตอบสนอง"
+    },
+    extra_q_list_6: {
+        "question": """[ท่องจำ] จงระบุ "หลักการพื้นฐาน 3 ประการ" ของกฎหมายแพ่งสมัยใหม่""",
+        "answer": "1. หลักกรรมสิทธิ์ในทรัพย์สินเป็นเด็ดขาด, 2. หลักความอิสระของเอกชน, 3. หลักความรับผิดเมื่อมีกระทำผิด (ความรับผิดชอบของตนเอง)"
+    },
+    extra_q_list_7: {
+        "question": """[ท่องจำ] มีข้อยกเว้น (ข้อจำกัด) สำหรับ "หลักเสรีภาพในการทำสัญญา" คืออะไร? จงอธิบายโดยอ้างถึงประมวลกฎหมายแพ่งมาตรา 90""",
+        "answer": "สัญญาที่ขัดต่อความสงบเรียบร้อยหรือศีลธรรมอันดีถือเป็นโมฆะ แม้จะมีการตกลงกันก็ตาม (มาตรา 90)"
+    },
+    extra_q_list_8: {
+        "question": """[ท่องจำ] "การห้ามใช้สิทธิโดยไม่สุจริต" (มาตรา 1 วรรค 3) คืออะไร? จงอธิบายรวมถึงเกณฑ์การพิจารณา (อัตวิสัย/วัตถุวิสัย)""",
+        "answer": "การใช้สิทธิที่สร้างความเสียหายให้ผู้อื่นอย่างไม่เป็นธรรมเป็นสิ่งต้องห้าม เกณฑ์: 1. อัตวิสัย (เจตนาลั่นแกล้ง), 2. วัตถุวิสัย (ความสมดุลของผลประโยชน์)"
+    },
+    extra_q_list_9: {
+        "question": """[ท่องจำ] จงอธิบายว่าทำไม "ความรับผิดโดยไม่มีความผิด" จึงจำเป็นในสังคมสมัยใหม่ (คำใบ้: ความรับผิดเพื่อตอบแทน, ความรับผิดเสี่ยงภัย)""",
+        "answer": "เพราะผู้เสียหายพิสูจน์ความประมาทได้ยากในอุบัติเหตุสมัยใหม่ จึงกำหนดความรับผิดแก่ผู้ที่ได้รับผลประโยชน์ (ตอบแทน) หรือผู้สร้างความเสี่ยง (เสี่ยงภัย)"
     }
 }
