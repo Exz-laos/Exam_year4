@@ -340,8 +340,74 @@ extra_q_list_9 = """
 【記述式・暗記用】なぜ現代では「無過失責任」が必要になったのか説明しなさい。（ヒント：報償責任・危険責任）
 """
 
+# Question 17.1: Private Property
+extra_q_17_4 = """17. (1) 【記述式】「私的所有権絶対の原則（私的所有権の保障）」とは何か、簡潔に説明しなさい。"""
+
+# Question 17.2: Private Autonomy
+extra_q_17_5 = """17. (2) 【記述式】「私的自治の原則（契約自由の原則）」とは何か、簡潔に説明しなさい。"""
+
+# Question 17.3: Negligence Liability
+extra_q_17_6 = """17. (3) 【記述式】「過失責任の原則（自己責任の原則）」とは何か、簡潔に説明しなさい。"""
+
+# Question 17.4: Public Welfare
+extra_q_17_7 = """17. (4) 【記述式】民法1条1項の「公共の福祉」とは何か、私権との関係で簡潔に説明しなさい。"""
+
+# Question 17.5: Good Faith
+extra_q_17_8 = """17. (5) 【記述式】民法1条2項の「信義誠実の原則（信義則）」とは何か、簡潔に説明しなさい。"""
+
+# Question 17.6: Abuse of Rights
+extra_q_17_9 = """17. (6) 【記述式】民法1条3項の「権利濫用の禁止」とは何か、簡潔に説明しなさい。"""
 
 
+extra_q_18_1 = """18. (1) 次の知的財産権の内容（ア〜オ）と保護の目的（①〜⑤）に適うものを、それぞれの語群から選びなさい。（各1点・計5点）
+
+1. 特許権 (Patent Right)
+   内容: ( A )
+   目的: ( B )
+
+2. 実用新案権 (Utility Model Right)
+   内容: ( C )
+   目的: ( D )
+
+3. 意匠権 (Design Right)
+   内容: ( E )
+   目的: ( F )
+
+4. 商標権 (Trademark Right)
+   内容: ( G )
+   目的: ( H )
+
+5. 著作権 (Copyright)
+   内容: ( I )
+   目的: ( J )
+
+**語群：知的財産権の内容**
+ア デザイン、視覚を通じて美感を起こさせる物品の形状、模様、色彩またはこれらの結合
+イ 文書、芸術的、学術的な創作物
+ウ 物品に関わる考案
+エ 商標、文字、図形、立体的形状もしくは色彩又はこれらの結合、音その他政令で定めるもの
+オ 発明、自然法則を利用した技術的思想の創作のうち高度なもの
+
+**語群：知的財産権の保護の目的**
+① 企業活動における商品や会社の名称を保護する。
+② 企業活動のうちデザイン、営業表示などを保護する。
+③ コンピュータソフト、データベース、インターネット、音楽、レコードなど、芸術的、学術的創作などを保護する。
+④ 工業技術に関する発明を保護する。
+⑤ 工業技術に関する考案を保護する。"""
+
+# Question 18.2: Definition of Invention (Patent Law)
+# Fill-in-the-blank regarding Natural Laws, Discovery vs Invention, and Use Inventions.
+extra_q_18_2 = """18. (2) つぎの特許法上の「発明」の定義について、( )の中の語句を語群から選ぶまたは( )の中の選択肢の中から○で囲んで、文章を完成させなさい。（各2点、計16点）
+
+発明とは **①( A )** を利用した技術的思想の創作のうち高度なものをいう。さらに特許として保護されるには、 **②( B )** 利用可能性がなければならない。
+
+発明とは **①( A )** を利用したものでなければならない。一方、発見は **①( A )** 自体の新たな認識であり、利用 **③( にあたる / にあたらない )**。
+ある物質の属性の発見は **①( A )** の利用とはいえないので、**④( 発明と認めることができない / 発明として認められる )** 。
+
+しかし、いわゆる用途発明は、一定の用途に使うことに創造性を **⑤( 認め / 認めない )** ので、発明が **⑥( 存在する / 存在しない )** と考えている。
+また、発見は **⑦( 創作なので / 創作とはいえないので )** 特許法で **⑧( 保護する / 保護しえない )** 。
+
+**語群:** 理論法則、自然法則、倫理上、理論上、法律上、産業上"""
 
 
 # --- Main Japanese Flashcard Data (Key=Question Variable, Value=Answer) ---
@@ -405,7 +471,36 @@ flashcard_data = {
     extra_q_list_6: "1. 所有権絶対の原則, 2. 私的自治の原則, 3. 過失責任の原則 {{Refer: 8回レジュメLAW.pdf}}",
     extra_q_list_7: "公の秩序や善良な風俗に反する内容（公序良俗違反）は、合意があっても無効となる。 {{Refer: Law8回スライド.pdf (p.13-14)}}",
     extra_q_list_8: "権利の行使でも他人に不当な損害を与える場合は許されない。基準：1.主観的（嫌がらせ目的）, 2.客観的（利益と損害のバランス）。 {{Refer: Law9回スライド.pdf (p.8)}}",
-    extra_q_list_9: "被害者が過失を証明するのが難しいため、利益を得ている者（報償責任）や危険を作り出した者（危険責任）に責任を負わせるため。 {{Refer: Law8回スライド.pdf (p.19)}}"
+    extra_q_list_9: "被害者が過失を証明するのが難しいため、利益を得ている者（報償責任）や危険を作り出した者（危険責任）に責任を負わせるため。 {{Refer: Law8回スライド.pdf (p.19)}}",
+
+    # Series 17
+    extra_q_17_4: "所有者は、自分の所有物を誰からも干渉されず、自由に使用・収益・処分できるという原則。 {{Refer: Law8回スライド.pdf (p.2, 5)}}",
+    extra_q_17_5: "個人の法律関係（契約など）は、国などの干渉を受けず、自分の自由な意思で決めることができるという原則。 {{Refer: Law8回スライド.pdf (p.2, 7)}}",
+    extra_q_17_6: "他人に損害を与えても、わざと（故意）か不注意（過失）がなければ、責任を負わないという原則。 {{Refer: Law8回スライド.pdf (p.2, 15)}}",
+    extra_q_17_7: "個人の権利（私権）は絶対無制限ではなく、社会全体の利益（公共の福祉）と調和するように制限されるという原則。 {{Refer: Law8回スライド.pdf (p.4)}}",
+    extra_q_17_8: "権利の行使や義務の履行において、相手方の信頼を裏切らないように誠実に行動しなければならないという原則。 {{Refer: Law8回スライド.pdf (p.4)}}",
+    extra_q_17_9: "形式的には権利の行使に見えても、他人に不当な損害を与えるなど、社会的に許される範囲を超える場合は権利として認められないという原則。 {{Refer: Law8回スライド.pdf (p.4)}}",
+    
+    # Series 18
+    extra_q_18_1: """
+    1. 特許権: オ, ④
+    2. 実用新案権: ウ, ⑤
+    3. 意匠権: ア, ②
+    4. 商標権: エ, ①
+    5. 著作権: イ, ③
+    {{Refer: Law12回スライド.pdf, 12回レジュメLAW.pdf}}""",
+    
+    extra_q_18_2: """
+    ①自然法則
+    ②産業上
+    ③にあたらない
+    ④発明と認めることができない
+    ⑤認め
+    ⑥存在する
+    ⑦創作とはいえないので
+    ⑧保護しえない
+    {{Refer: Law12回スライド.pdf (p.3-4), 12回レジュメLAW.pdf (p.1)}}"""
+
 
 }
 
@@ -815,7 +910,70 @@ When the victim demands the return of the movable from the person who acquired i
     extra_q_list_9: {
         "question": """[Memorization] Explain why "No-Fault Liability" became necessary in modern society. (Hint: Reward Liability, Risk Liability)""",
         "answer": "Because it is difficult for victims to prove negligence in modern accidents. Liability is imposed on those who profit (Reward) or create risk (Risk)."
+    },
+    # Series 17
+    extra_q_17_4: {
+        "question": """17. (1) [Descriptive] Briefly explain the "Principle of Absolute Private Ownership".""",
+        "answer": "The principle that owners can freely use, profit from, and dispose of their property without interference from anyone. {{Refer: Law8回スライド.pdf (p.2, 5)}}"
+    },
+    extra_q_17_5: {
+        "question": """17. (2) [Descriptive] Briefly explain the "Principle of Private Autonomy (Freedom of Contract)".""",
+        "answer": "The principle that individuals can decide their legal relationships (such as contracts) by their own free will without interference from the state. {{Refer: Law8回スライド.pdf (p.2, 7)}}"
+    },
+    extra_q_17_6: {
+        "question": """17. (3) [Descriptive] Briefly explain the "Principle of Negligence Liability (Self-Responsibility)".""",
+        "answer": "The principle that one is not liable for damages caused to others unless there is intent (on purpose) or negligence (carelessness). {{Refer: Law8回スライド.pdf (p.2, 15)}}"
+    },
+    extra_q_17_7: {
+        "question": """17. (4) [Descriptive] Briefly explain "Public Welfare" in Civil Code Article 1, Paragraph 1, in relation to private rights.""",
+        "answer": "The principle that private rights are not absolutely unlimited but are restricted to harmonize with the interests of society as a whole (public welfare). {{Refer: Law8回スライド.pdf (p.4)}}"
+    },
+    extra_q_17_8: {
+        "question": """17. (5) [Descriptive] Briefly explain the "Principle of Good Faith" in Civil Code Article 1, Paragraph 2.""",
+        "answer": "The principle that one must act sincerely and not betray the other party's trust when exercising rights or performing duties. {{Refer: Law8回スライド.pdf (p.4)}}"
+    },
+    extra_q_17_9: {
+        "question": """17. (6) [Descriptive] Briefly explain the "Prohibition of Abuse of Rights" in Civil Code Article 1, Paragraph 3.""",
+        "answer": "The principle that even if an act formally looks like an exercise of a right, it is not recognized as a right if it causes unjust harm to others or exceeds socially acceptable limits. {{Refer: Law8回スライド.pdf (p.4)}}"
+    },
+    # Series 18
+    extra_q_18_1: {
+        "question": """18. (1) Match the content (A-E) and purpose (1-5) for each Intellectual Property Right.
+
+1. Patent Right: Content ( ), Purpose ( )
+2. Utility Model Right: Content ( ), Purpose ( )
+3. Design Right: Content ( ), Purpose ( )
+4. Trademark Right: Content ( ), Purpose ( )
+5. Copyright: Content ( ), Purpose ( )
+
+**Content Group:**
+A. Design (Shape, pattern, color appealing to the eye)
+B. Literary, artistic, academic works
+C. Device related to articles (Utility Model)
+D. Trademark (Text, logo, 3D shape, sound, etc.)
+E. Invention (Highly advanced creation of technical ideas utilizing natural laws)
+
+**Purpose Group:**
+1. Protects names of products/companies in business.
+2. Protects designs/business indications in business.
+3. Protects artistic/academic creations (Software, Music, etc.).
+4. Protects inventions related to industrial technology.
+5. Protects devices (ideas) related to industrial technology.""",
+        "answer": "1: E-4, 2: C-5, 3: A-2, 4: D-1, 5: B-3"
+    },
+    extra_q_18_2: {
+        "question": """18. (2) Fill in the blanks regarding the definition of 'Invention' under Patent Law.
+
+Invention is defined as the highly advanced creation of technical ideas utilizing **①( Natural Laws )**. Furthermore, to be protected as a patent, it must have **②( Industrial )** applicability.
+
+Invention must utilize **①( Natural Laws )**. On the other hand, a discovery is merely a new recognition of **①( Natural Laws )** itself, and **③( does not amount to )** utilization.
+Therefore, the discovery of a property of a substance cannot be said to utilize **①( Natural Laws )**, so it **④( cannot be recognized as an invention )**.
+
+However, so-called 'Use Inventions' are considered to **⑥( exist )** as inventions because creativity is **⑤( recognized )** in using them for a specific purpose.
+Also, since a discovery **⑦( is not a creation )**, it **⑧( cannot be protected )** under Patent Law.""",
+        "answer": "1: Natural Laws, 2: Industrial, 3: does not amount to, 4: cannot be recognized, 5: recognized, 6: exist, 7: is not a creation, 8: cannot be protected"
     }
+
     
 }
    
@@ -1229,5 +1387,67 @@ D. ต้องมีการจดทะเบียน
     extra_q_list_9: {
         "question": """[ท่องจำ] จงอธิบายว่าทำไม "ความรับผิดโดยไม่มีความผิด" จึงจำเป็นในสังคมสมัยใหม่ (คำใบ้: ความรับผิดเพื่อตอบแทน, ความรับผิดเสี่ยงภัย)""",
         "answer": "เพราะผู้เสียหายพิสูจน์ความประมาทได้ยากในอุบัติเหตุสมัยใหม่ จึงกำหนดความรับผิดแก่ผู้ที่ได้รับผลประโยชน์ (ตอบแทน) หรือผู้สร้างความเสี่ยง (เสี่ยงภัย)"
+    },
+    # Series 17
+    extra_q_17_4: {
+        "question": """17. (1) [แบบบรรยาย] จงอธิบาย "หลักกรรมสิทธิ์ในทรัพย์สินเป็นเด็ดขาด" (Principle of Absolute Private Ownership) อย่างย่อ""",
+        "answer": "หลักการที่ว่าเจ้าของสามารถใช้ หาดอกผล และจำหน่ายทรัพย์สินของตนได้อย่างอิสระโดยปราศจากการแทรกแซงจากผู้อื่น {{Refer: Law8回スライド.pdf (p.2, 5)}}"
+    },
+    extra_q_17_5: {
+        "question": """17. (2) [แบบบรรยาย] จงอธิบาย "หลักความอิสระของเอกชน (เสรีภาพในการทำสัญญา)" (Principle of Private Autonomy) อย่างย่อ""",
+        "answer": "หลักการที่ว่าบุคคลสามารถกำหนดความสัมพันธ์ทางกฎหมาย (เช่น สัญญา) ได้ด้วยเจตจำนงเสรีของตนเองโดยปราศจากการแทรกแซงจากรัฐ {{Refer: Law8回スライド.pdf (p.2, 7)}}"
+    },
+    extra_q_17_6: {
+        "question": """17. (3) [แบบบรรยาย] จงอธิบาย "หลักความรับผิดเมื่อมีกระทำผิด (ความรับผิดชอบของตนเอง)" (Principle of Negligence Liability) อย่างย่อ""",
+        "answer": "หลักการที่ว่าบุคคลจะไม่ต้องรับผิดต่อความเสียหายที่ก่อให้เกิดแก่ผู้อื่น เว้นแต่จะมีเจตนา (จงใจ) หรือประมาทเลินเล่อ (ไม่ระวัง) {{Refer: Law8回スライド.pdf (p.2, 15)}}"
+    },
+    extra_q_17_7: {
+        "question": """17. (4) [แบบบรรยาย] จงอธิบาย "สวัสดิการสาธารณะ" (Public Welfare) ในประมวลกฎหมายแพ่ง มาตรา 1 วรรค 1 โดยเชื่อมโยงกับสิทธิส่วนบุคคล""",
+        "answer": "หลักการที่ว่าสิทธิส่วนบุคคลไม่ได้มีอยู่อย่างไม่จำกัด แต่ต้องถูกจำกัดเพื่อให้สอดคล้องกับผลประโยชน์ของสังคมโดยรวม (สวัสดิการสาธารณะ) {{Refer: Law8回スライド.pdf (p.4)}}"
+    },
+    extra_q_17_8: {
+        "question": """17. (5) [แบบบรรยาย] จงอธิบาย "หลักความสุจริต" (Principle of Good Faith) ในประมวลกฎหมายแพ่ง มาตรา 1 วรรค 2 อย่างย่อ""",
+        "answer": "หลักการที่ว่าบุคคลต้องกระทำการด้วยความจริงใจและไม่ทรยศต่อความไว้วางใจของอีกฝ่ายเมื่อใช้สิทธิหรือปฏิบัติหน้าที่ {{Refer: Law8回スライド.pdf (p.4)}}"
+    },
+    extra_q_17_9: {
+        "question": """17. (6) [แบบบรรยาย] จงอธิบาย "การห้ามใช้สิทธิโดยไม่สุจริต" (Prohibition of Abuse of Rights) ในประมวลกฎหมายแพ่ง มาตรา 1 วรรค 3 อย่างย่อ""",
+        "answer": "หลักการที่ว่าแม้การกระทำจะดูเหมือนเป็นการใช้สิทธิตามรูปแบบ แต่จะไม่ได้รับการยอมรับว่าเป็นสิทธิหากก่อให้เกิดความเสียหายแก่ผู้อื่นอย่างไม่เป็นธรรมหรือเกินขอบเขตที่สังคมยอมรับได้ {{Refer: Law8回スライド.pdf (p.4)}}"
+    },
+    # Series 18
+    extra_q_18_1: {
+        "question": """18. (1) จับคู่เนื้อหา (ก-จ) และวัตถุประสงค์ (1-5) สำหรับทรัพย์สินทางปัญญาแต่ละประเภท
+
+1. สิทธิบัตร: เนื้อหา ( ), วัตถุประสงค์ ( )
+2. อนุสิทธิบัตร: เนื้อหา ( ), วัตถุประสงค์ ( )
+3. สิทธิบัตรการออกแบบ: เนื้อหา ( ), วัตถุประสงค์ ( )
+4. เครื่องหมายการค้า: เนื้อหา ( ), วัตถุประสงค์ ( )
+5. ลิขสิทธิ์: เนื้อหา ( ), วัตถุประสงค์ ( )
+
+**กลุ่มเนื้อหา:**
+ก. การออกแบบ (รูปร่าง ลวดลาย สีสัน ที่ดึงดูดสายตา)
+ข. งานวรรณกรรม ศิลปะ วิชาการ
+ค. การประดิษฐ์คิดค้นเกี่ยวกับสินค้า (อนุสิทธิบัตร)
+ง. เครื่องหมายการค้า (ตัวอักษร โลโก้ รูปทรง 3 มิติ เสียง ฯลฯ)
+จ. การประดิษฐ์ (การสร้างสรรค์ความคิดทางเทคนิคระดับสูงโดยใช้กฎธรรมชาติ)
+
+**กลุ่มวัตถุประสงค์:**
+1. คุ้มครองชื่อสินค้าหรือบริษัทในทางธุรกิจ
+2. คุ้มครองการออกแบบ/สัญลักษณ์ทางธุรกิจ
+3. คุ้มครองผลงานสร้างสรรค์ทางศิลปะ/วิชาการ (ซอฟต์แวร์ ดนตรี ฯลฯ)
+4. คุ้มครองการประดิษฐ์ที่เกี่ยวกับเทคโนโลยีอุตสาหกรรม
+5. คุ้มครองการคิดค้น (อุปกรณ์) ที่เกี่ยวกับเทคโนโลยีอุตสาหกรรม""",
+        "answer": "1: จ-4, 2: ค-5, 3: ก-2, 4: ง-1, 5: ข-3"
+    },
+    extra_q_18_2: {
+        "question": """18. (2) จงเติมคำในช่องว่างเกี่ยวกับนิยามของ 'การประดิษฐ์' ตามกฎหมายสิทธิบัตร
+
+การประดิษฐ์คือการสร้างสรรค์ความคิดทางเทคนิคระดับสูงโดยใช้ **①( กฎธรรมชาติ )** นอกจากนี้ เพื่อให้ได้รับความคุ้มครองเป็นสิทธิบัตร ต้องมีความสามารถในการนำไปใช้ในทาง **②( อุตสาหกรรม )**
+
+การประดิษฐ์ต้องเป็นการใช้ **①( กฎธรรมชาติ )** ในทางกลับกัน การค้นพบเป็นเพียงการรับรู้ใหม่เกี่ยวกับ **①( กฎธรรมชาติ )** เอง จึง **③( ไม่ถือว่า )** เป็นการใช้
+ดังนั้น การค้นพบคุณสมบัติของสารบางอย่างจึงไม่ถือว่าเป็นการใช้ **①( กฎธรรมชาติ )** ดังนั้น **④( ไม่สามารถยอมรับว่าเป็นเกาประดิษฐ์ได้ )**
+
+อย่างไรก็ตาม 'การประดิษฐ์ที่เกิดจากการใช้งาน' (Use Invention) ถือว่า **⑥( มีอยู่ )** เป็นการประดิษฐ์ เนื่องจากมีการ **⑤( ยอมรับ )** ความคิดสร้างสรรค์ในการนำไปใช้เพื่อวัตถุประสงค์เฉพาะ
+นอกจากนี้ เนื่องจากเวการค้นพบ **⑦( ไม่ใช่การสร้างสรรค์ )** จึง **⑧( ไม่สามารถคุ้มครองได้ )** ตามกฎหมายสิทธิบัตร""",
+        "answer": "1: กฎธรรมชาติ, 2: อุตสาหกรรม, 3: ไม่ถือว่า, 4: ไม่สามารถยอมรับได้, 5: ยอมรับ, 6: มีอยู่, 7: ไม่ใช่การสร้างสรรค์, 8: ไม่สามารถคุ้มครองได้"
     }
 }
